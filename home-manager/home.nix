@@ -4,6 +4,10 @@
   home.username = "rocksustp";
   home.homeDirectory = "/home/rocksustp";
 
+  imports = [
+    ./home-modules/editors
+  ];
+
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     neofetch

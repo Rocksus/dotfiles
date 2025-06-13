@@ -12,17 +12,16 @@
  };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
-    # Please replace my-nixos with your hostname
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        ./configuration.nix
+        ./hosts/t480/configuration.nix
 
 	home-manager.nixosModules.home-manager
 	{
 	  home-manager.useGlobalPkgs = true;
 	  home-manager.useUserPackages = true;
-	  home-manager.users.rocksustp = import ./home.nix;
+	  home-manager.users.rocksustp = import ./home-manager/home.nix;
 	}
       ];
     };
