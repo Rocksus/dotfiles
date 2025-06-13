@@ -1,5 +1,5 @@
 {
   imports = [
-    "./locale.nix"
+    ./locale.nix
   ];
 }
