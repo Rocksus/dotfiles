@@ -16,6 +16,7 @@
       system = "x86_64-linux";
       modules = [
         ./hosts/t480/configuration.nix
+	./modules
 
 	home-manager.nixosModules.home-manager
 	{

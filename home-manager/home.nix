@@ -5,7 +5,7 @@
   home.homeDirectory = "/home/rocksustp";
 
   imports = [
-    ./home-modules/editors
+    #./home-modules/editors/vscode
   ];
 
   # Packages that should be installed to the user profile.
