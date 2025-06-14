@@ -1,8 +1,4 @@
 {pkgs, ...}: {
-  imports = [
-    ./configs.nix
-  ];
-
   programs.firefox = {
     enable = true;
     
