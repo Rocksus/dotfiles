@@ -7,6 +7,7 @@
   imports = [
     ./home-modules/editors/vscode
     ./home-modules/browsers
+    ./home-modules/productivity
   ];
 
   # Packages that should be installed to the user profile.
