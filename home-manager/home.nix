@@ -7,12 +7,12 @@
   imports = [
     ./home-modules/editors/vscode
     ./home-modules/browsers
-    ./home-modules/productivity
+    # ./home-modules/productivity
   ];
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-    neofetch
+    hyfetch
     nnn # terminal file manager
     thefuck
 
