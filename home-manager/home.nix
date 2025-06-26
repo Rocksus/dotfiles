@@ -7,12 +7,13 @@
   imports = [
     ./home-modules/editors/vscode
     ./home-modules/browsers
+    ./home-modules/languages
     # ./home-modules/productivity
   ];
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-    hyfetch
+    fastfetch
     nnn # terminal file manager
     thefuck
 
@@ -64,6 +65,13 @@
     shellAliases = {
       urldecode = "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
       urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
+    };
+  };
+
+  wayland.windowManager.hyprland = {
+    enable = true;
+    settings = {
+
     };
   };
 
