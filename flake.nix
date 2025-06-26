@@ -28,19 +28,20 @@
     };
  };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, ghostty, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs;};
       system = "x86_64-linux";
       modules = [
         ./hosts/t480/configuration.nix
-	./modules
-
-	home-manager.nixosModules.home-manager
-	{
-	  home-manager.useGlobalPkgs = true;
-	  home-manager.useUserPackages = true;
-	  home-manager.users.rocksustp = import ./home-manager/home.nix;
-	}
+	      ./modules
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.extraSpecialArgs = { inherit inputs; };
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.rocksustp = import ./home-manager/home.nix;
+        }
       ];
     };
   };

@@ -1,17 +1,12 @@
 {
   pkgs,
-  ghostty,
+  inputs,
   ...
 }:
-###########################################################
-#
-# Ghostty Configuration
-#
-###########################################################
 {
   programs.ghostty = {
     enable = true;
-    package = ghostty.packages.${pkgs.system}.default; # the latest version
+    package = inputs.ghostty.packages.${pkgs.system}.default; # the latest version
     enableBashIntegration = false;
     installBatSyntax = false;
     # installVimSyntax = true;
