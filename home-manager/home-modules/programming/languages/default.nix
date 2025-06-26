@@ -1,8 +1,8 @@
 {
     imports = [
-        ./go.nix,
-        ./python.nix,
-        ./node.nix,
+        ./go.nix
+        ./python.nix
+        ./node.nix
         ./rust.nix
     ];
 }

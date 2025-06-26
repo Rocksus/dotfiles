@@ -7,7 +7,7 @@
   imports = [
     ./home-modules/editors/vscode
     ./home-modules/browsers
-    ./home-modules/languages
+    ./home-modules/programming
     # ./home-modules/productivity
   ];
 
