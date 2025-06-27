@@ -22,6 +22,7 @@
       # only supported on macOS;
 
       keybind = [
+        "global:super+grave_accent=toggle_quick_terminal"
         "super+c=copy_to_clipboard"
         "super+shift+h=goto_split:left"
         "super+shift+j=goto_split:bottom"
