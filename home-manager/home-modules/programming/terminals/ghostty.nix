@@ -27,7 +27,7 @@
         "super+shift+j=goto_split:bottom"
         "super+shift+k=goto_split:top"
         "super+shift+l=goto_split:right"
-        "ctrl+page_up" = "jump_to_prompt:-1"
+        "ctrl+page_up=jump_to_prompt:-1"
       ];
 
       # https://ghostty.org/docs/config/reference#command
