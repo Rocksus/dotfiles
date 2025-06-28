@@ -29,35 +29,37 @@
     };
  };
 
-  outputs = { self, home-manager, nixpkgs, ... }@inputs:
-    let
-      inherit (self) outputs;
-      systems = [
-        "aarch64-linux"
-        "i686-linux"
-        "x86_64-linux"
-        "aarch64-darwin"
-        "x86_64-darwin"
-      ];
-      forAllSystems = nixpkgs.lib.genAttrs systems;
-    in {
-      packages =
-        forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
-      overlays = import ./overlays { inherit inputs; };
-      nixosConfigurations = {
-        t480 = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs; };
-          modules = [ 
-            ./hosts/t480
-          ];
-        };
+  outputs = {
+    self,
+    home-manager,
+    nixpkgs,
+    ...
+  } @ inputs: let
+    inherit (self) outputs;
+    systems = [
+      "aarch64-linux"
+      "i686-linux"
+      "x86_64-linux"
+      "aarch64-darwin"
+      "x86_64-darwin"
+    ];
+    forAllSystems = nixpkgs.lib.genAttrs systems;
+  in {
+    packages =
+      forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+    overlays = import ./overlays {inherit inputs;};
+    nixosConfigurations = {
+      t480 = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [./hosts/t480];
       };
-      homeConfigurations = {
-        "rocksustp@t480" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages."x86_64-linux";
-          extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ ./home-manager/home.nix ];
-        };
+    };
+    homeConfigurations = {
+      "rocksustp@t480" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [./home/rocksustp/t480.nix];
       };
+    };
   };
 }
