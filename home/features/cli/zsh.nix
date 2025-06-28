@@ -14,6 +14,12 @@ in {
             # autosuggestions.enable = true;
             # syntaxHighlighting.enable = true;
 
+            sessionVariables = {
+                NIX_PATH = "nixpkgs=channel:nixos-unstable";
+                NIX_LOG  = "info";
+                TERMINAL = "ghostty";
+            };
+
             ohMyZsh = {
                 enable = true;
                 plugins = [
@@ -24,19 +30,15 @@ in {
             };
 
             # Commands to run at login (e.g. when your user logs in)
-            loginShellInit = ''
-                export NIX_PATH="nixpkgs=channel:nixos-unstable"
-                export NIX_LOG="info"
-                export TERMINAL="ghostty"
-
+            loginExtra = ''
                 if [[ "$(tty)" == "/dev/tty1" ]]; then
-                    Hyprland &> /dev/null &
-                    exit
+                Hyprland &> /dev/null &
+                exit
                 fi
             '';
 
             # run on every new interactive shell
-            initExtra = ''
+            shellInit = ''
                 fastfetch
             '';
 
