@@ -20,15 +20,6 @@ in {
                 TERMINAL = "ghostty";
             };
 
-            ohMyZsh = {
-                enable = true;
-                plugins = [
-                    "git"
-                    "z"
-                ];
-                theme = "robbyrussell";
-            };
-
             # Commands to run at login (e.g. when your user logs in)
             loginExtra = ''
                 if [[ "$(tty)" == "/dev/tty1" ]]; then
