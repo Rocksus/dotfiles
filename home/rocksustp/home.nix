@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ lib, config, pkgs, ... }:
 
 {
   home.username = "rocksustp";
@@ -15,9 +15,9 @@
   home.stateVersion = "25.05";
 
   imports = [
-    ./home-modules/editors/vscode
-    ./home-modules/browsers
-    ./home-modules/programming
+    ../home-modules/editors/vscode
+    ../home-modules/browsers
+    ../home-modules/programming
     # ./home-modules/productivity
   ];
 
@@ -40,7 +40,6 @@
   home.packages = with pkgs; [
     fastfetch
     nnn # terminal file manager
-    thefuck
 
     # archives
     zip
