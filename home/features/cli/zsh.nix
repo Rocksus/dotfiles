@@ -10,6 +10,18 @@ in {
     config = mkIf cfg.enable {
         programs.zsh = {
             enable = true;
+            enableCompletion = true;
+            autosuggestions.enable = true;
+            syntaxHighlighting.enable = true;
+
+            ohMyZsh = {
+                enable = true;
+                plugins = [
+                    "git"
+                    "z"
+                ];
+                theme = "robbyrussell";
+            };
 
             # Commands to run at login (e.g. when your user logs in)
             loginShellInit = ''
@@ -23,8 +35,8 @@ in {
                 fi
             '';
 
-            # Commands to run for every interactive shell
-            interactiveShellInit = ''
+            # run on every new interactive shell
+            initExtra = ''
                 fastfetch
             '';
 
