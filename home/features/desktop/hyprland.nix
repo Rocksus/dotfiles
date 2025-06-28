@@ -178,9 +178,8 @@ in {
         ];
 
         windowrulev2 = [
-          "workspace 1,class:(Emacs)"
-          "workspace 3,opacity 1.0, class:(brave-browser)"
-          "workspace 4,class:(com.obsproject.Studio)"
+          "workspace 1,class:(ghostty)"
+          "workspace 3,opacity 1.0, class:(firefox)"
         ];
       };
     };
