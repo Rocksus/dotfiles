@@ -29,7 +29,6 @@
         xz
         unzip
         p7zip
-        fzf # A command-line fuzzy finder
 
         nnn # terminal file manager
         fastfetch
