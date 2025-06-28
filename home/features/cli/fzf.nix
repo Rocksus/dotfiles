@@ -8,7 +8,7 @@ with lib; let
 in {
     options.features.cli.fzf.enable = mkEnableOption "enable fuzzy finder";
 
-    config = mkif cfg.enable {
+    config = mkIf cfg.enable {
         programs.fzf = {
             enable = true;
             enableZshIntegration = true;
