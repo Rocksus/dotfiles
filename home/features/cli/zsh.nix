@@ -11,13 +11,29 @@ in {
         programs.zsh = {
             enable = true;
             enableCompletion = true;
-            # autosuggestions.enable = true;
-            # syntaxHighlighting.enable = true;
+            autosuggestion.enable = true;
+            syntaxHighlighting.enable = true;
+
+            oh-my-zsh = {
+                enable = true;
+            };
 
             sessionVariables = {
                 NIX_PATH = "nixpkgs=channel:nixos-unstable";
                 NIX_LOG  = "info";
                 TERMINAL = "ghostty";
+            };
+            envExtra             = ''
+                export EDITOR=nvim
+            '';
+
+            oh-my-zsh = {
+                enable = true;
+                plugins = [
+                    "git"
+                    "z"
+                ];
+                theme = "robbyrussell";
             };
 
             # Commands to run at login (e.g. when your user logs in)
@@ -29,7 +45,7 @@ in {
             '';
 
             # run on every new interactive shell
-            shellInit = ''
+            initContent = ''
                 fastfetch
             '';
 
@@ -37,6 +53,7 @@ in {
                 ls    = "eza";
                 grep  = "rg";
                 ps    = "procs";
+                vim   = "nvim";
             };
         };
     };
