@@ -11,6 +11,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    }
+
     # community wayland nixpkgs
     # nixpkgs-wayland.url = "github:nix-community/nixpkgs-wayland";
     # anyrun - a wayland launcher
@@ -32,6 +37,8 @@
   outputs = {
     self,
     home-manager,
+    disko,
+    ghostty,
     nixpkgs,
     ...
   } @ inputs: let
@@ -51,7 +58,10 @@
     nixosConfigurations = {
       t480 = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [./hosts/t480];
+        modules = [
+          ./hosts/t480
+          inputs.disko.nixosModules.disko
+        ];
       };
     };
     homeConfigurations = {
