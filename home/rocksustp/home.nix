@@ -39,6 +39,7 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     fastfetch
+    kitty
     nnn # terminal file manager
 
     # archives
