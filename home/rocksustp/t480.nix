@@ -6,6 +6,7 @@
         ../features/cli
         ../features/browsers
         ../features/programming
+        ../features/desktop
         # ./features/productivity
     ];
 
@@ -13,6 +14,9 @@
         cli = {
             zsh.enable = true;
             fzf.enable = true;
+        };
+        desktop = {
+            wayland.enable = true;
         };
     };
 }
