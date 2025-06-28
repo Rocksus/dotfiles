@@ -1,5 +1,6 @@
 { config, ... }:
 {
+  networking.networkmanager.enable = true;
   networking.nameservers = [
     "208.67.222.222"  # OpenDNS primary
     "208.67.220.220"  # OpenDNS secondary

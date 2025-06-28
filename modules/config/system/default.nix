@@ -1,5 +1,5 @@
 {
   imports = [
-    ./dns.nix
+    ./network.nix
   ];
 }
