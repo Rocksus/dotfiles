@@ -1,6 +1,6 @@
 # Common configuration for all hosts
 
-{ lib, inputs, outputs, ... }: {
+{ lib, inputs, outputs, pkgs, ... }: {
   imports = [
     ./config
     ./users
