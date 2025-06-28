@@ -14,10 +14,6 @@ in {
             autosuggestion.enable = true;
             syntaxHighlighting.enable = true;
 
-            oh-my-zsh = {
-                enable = true;
-            };
-
             sessionVariables = {
                 NIX_PATH = "nixpkgs=channel:nixos-unstable";
                 NIX_LOG  = "info";
