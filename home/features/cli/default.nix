@@ -1,6 +1,7 @@
 { pkgs, ... }: {
     imports = [
         ./zsh.nix
+        ./fzf.nix
     ];
 
     programs.zoxide = {
