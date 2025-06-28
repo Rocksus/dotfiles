@@ -14,13 +14,6 @@
   # changes in each release.
   home.stateVersion = "25.05";
 
-  imports = [
-    ../home-modules/editors/vscode
-    ../home-modules/browsers
-    ../home-modules/programming
-    # ./home-modules/productivity
-  ];
-
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
@@ -40,20 +33,6 @@
   home.packages = with pkgs; [
     fastfetch
     kitty
-    nnn # terminal file manager
-
-    # archives
-    zip
-    xz
-    unzip
-    p7zip
-
-    # utils
-    ripgrep # recursively searches directories for a regex pattern
-    jq # A lightweight and flexible command-line JSON processor
-    yq-go # yaml processor https://github.com/mikefarah/yq
-    eza # A modern replacement for ‘ls’
-    fzf # A command-line fuzzy finder
   ];
 
   # git config
