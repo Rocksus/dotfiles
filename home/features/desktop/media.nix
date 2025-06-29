@@ -32,6 +32,8 @@ in {
       qpwgraph
       v4l-utils
       plexamp
+      webcord
+
       # uxplay
       # vlc
       # webcord
