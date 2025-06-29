@@ -14,5 +14,5 @@ in {
         home.packages = with pkgs; [
             bruno
         ];
-    }
+    };
 }

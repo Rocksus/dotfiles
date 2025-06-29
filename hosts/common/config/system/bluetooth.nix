@@ -1,6 +1,14 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 {
-  hardware.bluetooth.enable = true;
-  services.bluez.enable = true;
-  services.bluez.obex.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = false;
+    package = pkgs.bluez5-experimental;
+    settings = {
+      General = {
+        Experimental = true;
+        FastConnectable = true;
+      };
+    };
+  };
 }

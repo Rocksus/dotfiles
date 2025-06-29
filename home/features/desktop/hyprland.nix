@@ -130,7 +130,7 @@ in {
 
         bind = [
           "$mainMod, return, exec, ghostty"
-          "$mainMod, t, exec, ghostty -c 'fastfetch'"
+          "$mainMod, t, exec, ghostty"
           "$mainMod SHIFT, e, exec, ghostty"
           "$mainMod, o, exec, thunar"
           "$mainMod, Escape, exec, wlogout -p layer-shell"

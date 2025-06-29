@@ -19,12 +19,6 @@
   networking.hostName = "t480";
 
   i18n.defaultLocale = "en_US.UTF-8";
-
-  services.xserver.xkb = {
-    enable = false;
-    layout = "us";
-    variant = "";
-  };
   
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
