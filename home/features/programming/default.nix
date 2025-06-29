@@ -2,5 +2,6 @@
     imports = [
         ./languages
         ./terminals
+        ./utilities
     ];
 }

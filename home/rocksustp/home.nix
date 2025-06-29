@@ -33,7 +33,6 @@
   home.packages = with pkgs; [
     fastfetch
     kitty
-    wofi
   ];
 
   # git config

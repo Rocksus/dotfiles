@@ -19,6 +19,13 @@
             hyprland.enable = true;
             wayland.enable = true;
             fonts.enable = true;
+            office.enable = true;
+            media.enable = true;
+        };
+        programming = {
+            utilities = {
+                bruno.enable = true;
+            };
         };
     };
 
