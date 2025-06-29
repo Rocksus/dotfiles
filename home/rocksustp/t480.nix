@@ -17,6 +17,8 @@
         };
         desktop = {
             hyprland.enable = true;
+            hypridle.enable = true;
+            hyprlock.enable = true;
             wayland.enable = true;
             fonts.enable = true;
             office.enable = true;
