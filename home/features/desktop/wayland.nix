@@ -219,7 +219,7 @@ in {
             format = "{}°C";
             tooltip = true;
             interval = 3600;
-            exec = "wttrbar --location Pockau-Lengefeld";
+            exec = "wttrbar --location Jakarta-Indonesia";
             return-type = "json";
           };
           tray = {
