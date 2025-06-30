@@ -23,6 +23,7 @@
             fonts.enable = true;
             office.enable = true;
             media.enable = true;
+            slack.enable = true;
         };
         programming = {
             utilities = {
