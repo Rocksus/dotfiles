@@ -2,6 +2,8 @@
   imports = [
     ./wayland.nix
     ./hyprland.nix
+    ./hyprlock.nix
+    ./hypridle.nix
     ./wofi.nix
     ./fonts.nix
     ./office.nix
