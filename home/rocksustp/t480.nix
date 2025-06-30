@@ -7,6 +7,7 @@
         ../features/browsers
         ../features/programming
         ../features/desktop
+        ../features/security
         # ./features/productivity
     ];
 
@@ -29,6 +30,12 @@
             utilities = {
                 bruno.enable = true;
             };
+        };
+        security = {
+            wireguard.enable = true;
+        };
+        productivity = {
+            1password.enable = true;
         };
     };
 
