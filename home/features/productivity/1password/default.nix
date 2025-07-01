@@ -18,16 +18,16 @@ in {
       ];
 
       programs = {
-        _1password = {
-          enable = true;
-          package = pkgs._1password;
-        };
-        _1password-gui = {
-          enable = true;
-          package = pkgs._1password-gui;
-          polkitPolicyOwners = [ "rocksustp" ];
-          # polkitPolicyOwners = config.users.groups.wheel.members;
-        };
+        # _1password = {
+        #  enable = true;
+        #  package = pkgs._1password;
+        #};
+        #_1password-gui = {
+        #  enable = true;
+        #  package = pkgs._1password-gui;
+        #  polkitPolicyOwners = [ "rocksustp" ];
+        #  # polkitPolicyOwners = config.users.groups.wheel.members;
+        #};
 
       };
     };
