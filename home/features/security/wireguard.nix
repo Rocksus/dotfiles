@@ -16,3 +16,5 @@ in {
         ];
     };
 }
+
+# error: undefined variable 'wireguard'
