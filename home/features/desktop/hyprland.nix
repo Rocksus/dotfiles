@@ -18,6 +18,7 @@ in {
 
         exec-once = [
           "waybar"
+          "mako"
           "hyprpaper"
           "hypridle"
           "wl-paste -p -t text --watch clipman store -P --histpath=\"~/.local/share/clipman-primary.json\""
@@ -107,7 +108,7 @@ in {
           "float, title:branchdialog"
           "float, Lxappearance"
           "float, Wofi"
-          "float, dunst"
+          "float, mako"
           "animation none,Wofi"
           "float,viewnior"
           "float,feh"

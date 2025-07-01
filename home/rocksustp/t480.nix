@@ -8,7 +8,7 @@
         ../features/programming
         ../features/desktop
         ../features/security
-        # ./features/productivity
+        ../features/productivity
     ];
 
     features = {
@@ -25,6 +25,7 @@
             office.enable = true;
             media.enable = true;
             slack.enable = true;
+            mako.enable = true;
         };
         programming = {
             utilities = {
@@ -32,10 +33,10 @@
             };
         };
         security = {
-            wireguard.enable = true;
+            wireguard.enable = false;
         };
         productivity = {
-            1password.enable = true;
+            _1password.enable = true;
         };
     };
 
