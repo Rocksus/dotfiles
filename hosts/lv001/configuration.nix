@@ -9,6 +9,18 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  
+  services = {
+    xserver = {
+      desktopManager.gnome = {
+        enable = true;
+      };
+      displayManager.gdm = {
+        enable = true;
+        autoSuspend = false;
+      };
+    };
+  };
 
   networking.hostName = "lv001";
 
