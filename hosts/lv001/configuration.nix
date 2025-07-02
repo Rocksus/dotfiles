@@ -11,14 +11,12 @@
   boot.loader.efi.canTouchEfiVariables = true;
   
   services = {
-    xserver = {
-      desktopManager.gnome = {
-        enable = true;
-      };
-      displayManager.gdm = {
-        enable = true;
-        autoSuspend = false;
-      };
+    desktopManager.gnome = {
+      enable = true;
+    };
+    displayManager.gdm = {
+      enable = true;
+      autoSuspend = false;
     };
   };
 
