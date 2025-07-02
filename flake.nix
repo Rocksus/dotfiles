@@ -60,7 +60,19 @@
         specialArgs = {inherit inputs outputs;};
         modules = [
           ./hosts/t480
+          inputs.disko.nixosModules.disko
+        ];
+      };
+      m920q = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [
           ./hosts/m920q
+          inputs.disko.nixosModules.disko
+        ];
+      };
+      lv001 = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [
           ./hosts/lv001
           inputs.disko.nixosModules.disko
         ];
