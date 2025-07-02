@@ -4,6 +4,7 @@
   imports = [
     ./config
     ./users
+    ./utils
     inputs.home-manager.nixosModules.home-manager
   ];
 
@@ -42,7 +43,7 @@
       experimental-features = "nix-command flakes";
       trusted-users = [
         "root"
-        "rocksustp"
+        "rocksus"
       ]; # Set users that are allowed to use the flake command
     };
     # gc = {

@@ -60,15 +60,27 @@
         specialArgs = {inherit inputs outputs;};
         modules = [
           ./hosts/t480
+          ./hosts/m920q
+          ./hosts/lv001
           inputs.disko.nixosModules.disko
         ];
       };
     };
     homeConfigurations = {
-      "rocksustp@t480" = home-manager.lib.homeManagerConfiguration {
+      "rocksus@t480" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages."x86_64-linux";
         extraSpecialArgs = {inherit inputs outputs;};
-        modules = [./home/rocksustp/t480.nix];
+        modules = [./home/rocksus/t480.nix];
+      };
+      "rocksus@m920q" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [./home/rocksus/m920q.nix];
+      };
+      "rocksus@lv001" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [./home/rocksus/lv001.nix];
       };
     };
   };

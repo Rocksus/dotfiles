@@ -25,7 +25,7 @@ in {
         #_1password-gui = {
         #  enable = true;
         #  package = pkgs._1password-gui;
-        #  polkitPolicyOwners = [ "rocksustp" ];
+        #  polkitPolicyOwners = [ "rocksus" ];
         #  # polkitPolicyOwners = config.users.groups.wheel.members;
         #};
 

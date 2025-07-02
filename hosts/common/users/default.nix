@@ -1,5 +1,5 @@
 {
     imports = [
-        ./rocksustp.nix
+        ./rocksus.nix
     ];
 }

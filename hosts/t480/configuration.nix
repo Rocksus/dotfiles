@@ -9,7 +9,6 @@
     [ # Include the results of the hardware scan.
       ./disko-config.nix
       ./hardware-configuration.nix
-      ../../modules
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -19,15 +18,6 @@
   networking.hostName = "t480";
 
   i18n.defaultLocale = "en_US.UTF-8";
-  
-  # List packages installed in system profile.
-  # You can use https://search.nixos.org/ to find more packages (and options).
-  environment.systemPackages = with pkgs; [
-  #   vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #   wget
-      neovim
-      git
-  ];
 
   programs.zsh.enable = true;
 
