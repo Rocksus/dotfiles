@@ -12,5 +12,5 @@ in {
     services.desktopManager.gnome = {
       enable = true;
     };
-  }
+  };
 }
