@@ -1,11 +1,7 @@
 {pkgs, ...}: {
   imports = [
-    ./wayland.nix
-    ./hyprland.nix
-    ./hyprlock.nix
-    ./hypridle.nix
-    ./mako.nix
-    ./wofi.nix
+    ./hyprland
+    ./gnome
     ./fonts.nix
     ./office.nix
     ./media.nix
