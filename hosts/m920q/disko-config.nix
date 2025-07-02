@@ -7,13 +7,13 @@
         content  = {
           type       = "gpt";
           partitions = {
-            bios = {
-              size = "1MiB";
+            boot = {
+              size = "1M";
               type = "EF02";
             };
 
             ESP = {
-              size = "512MiB";
+              size = "512M";
               type = "EF00";
               content = {
                 type        = "filesystem";
