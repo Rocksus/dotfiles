@@ -14,5 +14,6 @@
     git
     neovim
     gnumake
+    xclip
   ];
 }
