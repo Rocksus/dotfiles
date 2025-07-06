@@ -8,6 +8,7 @@
   imports = [
     ./nh.nix
     ./tailscale.nix
+    ./podman.nix
   ];
 
   environment.systemPackages = with pkgs; [
