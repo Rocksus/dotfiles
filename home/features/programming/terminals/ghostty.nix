@@ -16,7 +16,7 @@
       theme = "catppuccin-mocha";
 
       font-family = "Maple Mono NF CN";
-      font-size = 13;
+      font-size = 11;
 
       background-opacity = 0.93;
       # only supported on macOS;
