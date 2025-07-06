@@ -179,8 +179,8 @@ in {
         ];
 
         windowrulev2 = [
-          "workspace=1,class=(ghostty)"
-          "workspace=3,opacity=1.0,class=(firefox)"
+          "workspace=1,class:(ghostty)"
+          "workspace=3,opacity=1.0,class:(firefox)"
         ];
       };
     };
