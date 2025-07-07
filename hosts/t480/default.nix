@@ -3,5 +3,5 @@
 
     utils = {
         podman.enable = true;
-    }
+    };
 }
