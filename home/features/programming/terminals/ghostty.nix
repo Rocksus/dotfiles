@@ -1,8 +1,12 @@
 {
   pkgs,
   inputs,
+  self,
   ...
 }:
+let
+  theme = import "${self}/lib/theme" { inherit pkgs; };
+in
 {
   programs.ghostty = {
     enable = true;
@@ -13,16 +17,16 @@
     # installVimSyntax = true;
 
     settings = {
-      theme = "catppuccin-mocha";
-
-      font-family = "Maple Mono NF CN";
+      theme = "catppucin-macchiato";
+      font-family = "${theme.fonts.monospace.name}";
       font-size = 11;
 
       background-opacity = 0.93;
       # only supported on macOS;
 
       keybind = [
-        "global:super+grave_accent=toggle_quick_terminal"
+        # TODO: figure out how to properly use this globally
+        # "global:super+grave_accent=toggle_quick_terminal"
         "super+c=copy_to_clipboard"
         "super+shift+h=goto_split:left"
         "super+shift+j=goto_split:bottom"
