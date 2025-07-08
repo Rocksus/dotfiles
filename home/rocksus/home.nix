@@ -44,4 +44,26 @@
   
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.ssh = {
+    enable = true;
+
+    matchBlocks = {
+      "github.com" = {
+        hostname     = "github.com";
+        user         = "git";
+        identityFile = [ "~/.ssh/id_personal" ];
+      };
+      "github_verihubs" = {
+        hostname     = "github.com";
+        user         = "git";
+        identityFile = [ "/home/rocksus/.ssh/id_vh" ];
+      };
+      "m920q" = {
+        hostname     = "192.168.1.161";
+        user         = "rocksus";
+        identityFile = [ "/hom-e/rocksus/.ssh/id_nixos_rocksus" ];
+      };
+    };
+  };
 }

@@ -32,6 +32,11 @@
     ghostty = {
       url = "github:ghostty-org/ghostty";
     };
+
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
  };
 
   outputs = {
@@ -40,6 +45,7 @@
     disko,
     ghostty,
     nixpkgs,
+    agenix,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -61,6 +67,7 @@
         modules = [
           ./hosts/t480
           inputs.disko.nixosModules.disko
+          agenix.nixosModules.default
         ];
       };
       m920q = nixpkgs.lib.nixosSystem {
@@ -68,6 +75,7 @@
         modules = [
           ./hosts/m920q
           inputs.disko.nixosModules.disko
+          agenix.nixosModules.default
         ];
       };
       lv001 = nixpkgs.lib.nixosSystem {
@@ -75,6 +83,7 @@
         modules = [
           ./hosts/lv001
           inputs.disko.nixosModules.disko
+          agenix.nixosModules.default
         ];
       };
     };

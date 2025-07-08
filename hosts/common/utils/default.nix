@@ -7,7 +7,6 @@
 }: {
   imports = [
     ./nh.nix
-    ./tailscale.nix
     ./podman.nix
   ];
 

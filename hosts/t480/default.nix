@@ -1,5 +1,10 @@
 {
-    imports = [ ../common ./configuration.nix ];
+    imports = [ 
+        ../common 
+        ./configuration.nix
+        ./secrets.nix
+        ./services
+    ];
 
     utils = {
         podman.enable = true;
