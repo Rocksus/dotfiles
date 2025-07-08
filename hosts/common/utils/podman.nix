@@ -18,8 +18,8 @@ in {
                         "--filter=label!=important"
                     ];
                 };
-            }
-        }
+            };
+        };
         environment.systemPackages = with pkgs; [
             podman-compose
         ];
