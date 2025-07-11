@@ -37,6 +37,8 @@
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    inputs.swww.url = "github:LGFae/swww";
  };
 
   outputs = {

@@ -19,7 +19,7 @@ in {
         exec-once = [
           "waybar"
           "mako"
-          "hyprpaper"
+          "swww-daemon"
           "hypridle"
           "wl-paste -p -t text --watch clipman store -P --histpath=\"~/.local/share/clipman-primary.json\""
         ];
