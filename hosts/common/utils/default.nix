@@ -8,6 +8,7 @@
   imports = [
     ./nh.nix
     ./podman.nix
+    ./openssh.nix
   ];
 
   environment.systemPackages = with pkgs; [
