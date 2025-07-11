@@ -38,7 +38,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    inputs.swww.url = "github:LGFae/swww";
+    # wallpaper management
+    swww.url = "github:LGFae/swww";
  };
 
   outputs = {
