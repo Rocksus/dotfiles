@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./hyprland
+    ./swww
     ./fonts.nix
     ./office.nix
     ./media.nix

@@ -1,12 +1,8 @@
 {
   pkgs,
   inputs,
-  self,
   ...
 }:
-let
-  theme = import "${self}/lib/theme" { inherit pkgs; };
-in
 {
   programs.ghostty = {
     enable = true;
@@ -18,7 +14,7 @@ in
 
     settings = {
       theme = "catppucin-macchiato";
-      font-family = "${theme.fonts.monospace.name}";
+      font-family = "Maple Mono NF CN";
       font-size = 11;
 
       background-opacity = 0.93;
