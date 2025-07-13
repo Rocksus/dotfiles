@@ -25,6 +25,7 @@
             media.enable = true;
             slack.enable = true;
             mako.enable = true;
+            swww.enable = true;
         };
         programming = {
             utilities = {
