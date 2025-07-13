@@ -8,5 +8,6 @@
 
     utils = {
         podman.enable = true;
+        openssh.enable
     };
 }
