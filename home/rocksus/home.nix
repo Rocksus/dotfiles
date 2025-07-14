@@ -62,7 +62,7 @@
       "m920q" = {
         hostname     = "192.168.1.161";
         user         = "rocksus";
-        identityFile = [ "/hom-e/rocksus/.ssh/id_nixos_rocksus" ];
+        identityFile = [ "/home/rocksus/.ssh/id_nixos_rocksus" ];
       };
     };
   };
