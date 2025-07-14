@@ -1,3 +1,12 @@
 {
-    imports = [ ../common ./configuration.nix ];
+    imports = [ 
+        ../common 
+        ./configuration.nix
+        ./services
+    ];
+
+    utils = {
+        openssh.enable = true;
+        tailscale.enable = true;
+    };
 }

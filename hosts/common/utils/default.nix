@@ -9,6 +9,7 @@
     ./nh.nix
     ./podman.nix
     ./openssh.nix
+    ./tailscale.nix
   ];
 
   environment.systemPackages = with pkgs; [
