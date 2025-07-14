@@ -19,9 +19,9 @@ in {
         exec-once = [
           "waybar"
           "mako"
-          "swww-init"
           "hypridle"
           "wl-paste -p -t text --watch clipman store -P --histpath=\"~/.local/share/clipman-primary.json\""
+          "sleep 5; bash ${config.xdg.dataFile."change_wallpaper.sh".source} &"
         ];
 
         env = [

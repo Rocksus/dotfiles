@@ -41,3 +41,6 @@ in {
     };
   };
 }
+
+# taken from 
+# https://github.com/V3ntus/nixos/blob/main/features/home-manager/desktop/addons/wallpapers.nix
