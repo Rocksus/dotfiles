@@ -1,9 +1,8 @@
 {
-  swww,
   config,
   lib,
   pkgs,
-  input,
+  inputs,
   ...
 }:
 with lib; let
@@ -17,14 +16,14 @@ in {
   options.features.desktop.swww.enable = mkEnableOption "swww config";
 
   config = mkIf cfg.enable {
-    home.packages = [swww.packages."x86_64-linux".swww];
+    home.packages = [inputs.swww.packages.${pkgs.system}.swww];
 
     xdg.dataFile."change_wallpaper.sh" = {
       enable = true;
       text = ''
         set -e
         while true; do
-          BG=`find ${../../../../wallpapers} -name "*.jpg" -o -name "*.png" | shuf -n1`
+          BG=`find ${../../../../lib/wallpapers} -name "*.jpg" -o -name "*.png" | shuf -n1`
           if pgrep swww-daemon >/dev/null; then
             swww img "$BG" \
               --transition-fps 60 \

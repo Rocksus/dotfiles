@@ -49,6 +49,7 @@
     ghostty,
     nixpkgs,
     agenix,
+    swww,
     ...
   } @ inputs: let
     inherit (self) outputs;
