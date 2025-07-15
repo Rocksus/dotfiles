@@ -7,6 +7,7 @@
         ../features/browsers
         ../features/programming
         ../features/desktop
+        ../features/entertainment
     ];
 
     features = {
@@ -30,6 +31,9 @@
             utilities = {
                 bruno.enable = true;
             };
+        };
+        entertainment = {
+            mixxx.enable = true;
         };
     };
 
