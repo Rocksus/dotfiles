@@ -1,7 +1,9 @@
 {config, pkgs, ...}: {
-  programs.mixxx = {
-    enable = true;
-  };
+  environment.systemPackages = with pkgs; [
+    mixxx
+  ];
   # allow mixxx to access udev
-  services.udev.packages = [ pkgs.mixxx ];
+  services.udev.packages = with pkgs; [ 
+    mixxx 
+  ];
 }
