@@ -7,7 +7,6 @@
         ../features/browsers
         ../features/programming
         ../features/desktop
-        ../features/productivity
     ];
 
     features = {
@@ -31,9 +30,6 @@
             utilities = {
                 bruno.enable = true;
             };
-        };
-        productivity = {
-            _1password.enable = true;
         };
     };
 
