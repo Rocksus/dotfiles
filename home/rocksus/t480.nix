@@ -10,6 +10,9 @@
     ];
 
     features = {
+        browsers = {
+            zen-browser.enable = true;
+        };
         cli = {
             zsh.enable = true;
             fzf.enable = true;
