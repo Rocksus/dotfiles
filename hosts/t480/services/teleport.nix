@@ -4,7 +4,6 @@
 }:
 {
     services.teleport = {
-        enable = true;
-        
+        enable = true;  
     };
 }

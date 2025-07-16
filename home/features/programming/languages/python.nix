@@ -7,5 +7,6 @@
       ]))
 
     pipenv
+    poetry
   ];
 }
