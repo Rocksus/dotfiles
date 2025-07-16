@@ -7,9 +7,7 @@
   # https://nixos.wiki/wiki/Overlays
   modifications = final: prev:
     {
-      # example = prev.example.overrideAttrs (oldAttrs: rec {
-      # ...
-      # });
+      n8n = import ./mods/n8n.nix {inherit prev;};
     };
 
   stable-packages = final: _prev: {

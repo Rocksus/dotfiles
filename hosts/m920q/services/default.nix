@@ -1,6 +1,7 @@
 {
   imports = [
     ./containers
+    ./n8n.nix
   ];
   services = {
     gnome.gnome-keyring.enable = true;
