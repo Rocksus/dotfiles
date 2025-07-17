@@ -16,4 +16,6 @@
       config.allowUnfree = true;
     };
   };
+
+  rust-overlay = inputs.rust-overlay.overlays.default;
 }
