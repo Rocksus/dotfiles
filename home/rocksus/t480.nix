@@ -32,6 +32,7 @@
         programming = {
             utilities = {
                 bruno.enable = true;
+                obsidian.enable = true;
             };
         };
     };
