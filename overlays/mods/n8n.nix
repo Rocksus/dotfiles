@@ -6,7 +6,7 @@ prev.n8n.overrideAttrs (oldAttrs: rec {
     owner = "n8n-io";
     repo = "n8n";
     rev = "n8n@${version}";
-    hash = "";
+    hash = "sha256-s8om1FcTakYdbE4Ai4Me6/p0A0tPHsS8PP4aJDvk6qs=";
   };
 
   pnpmDeps = prev.pnpm.fetchDeps {
