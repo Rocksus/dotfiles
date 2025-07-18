@@ -12,6 +12,6 @@ prev.n8n.overrideAttrs (oldAttrs: rec {
   pnpmDeps = prev.pnpm.fetchDeps {
     pname = oldAttrs.pname;
     inherit version src;
-    hash = "";
+    hash = "sha256-1nH+M4UmhdyfseLwBVx+lDX5cYnAH8D944ck4u3uvXg=";
   };
 })
