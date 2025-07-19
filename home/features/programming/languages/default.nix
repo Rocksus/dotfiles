@@ -3,6 +3,6 @@
         ./go.nix
         ./python.nix
         ./node.nix
-        # ./rust.nix
+        ./rust.nix
     ];
 }
