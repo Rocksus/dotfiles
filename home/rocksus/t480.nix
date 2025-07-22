@@ -33,6 +33,7 @@
             utilities = {
                 bruno.enable = true;
                 obsidian.enable = true;
+                dbeaver.enable = true;
             };
         };
     };
