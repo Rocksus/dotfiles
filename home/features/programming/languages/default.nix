@@ -4,5 +4,6 @@
         ./python.nix
         ./node.nix
         ./rust.nix
+        ./c.nix
     ];
 }
