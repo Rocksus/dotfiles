@@ -141,6 +141,7 @@ in {
           "$mainMod, F, fullscreen"
           "$mainMod, V, togglefloating"
           "$mainMod, D, exec, wofi --show drun --allow-images"
+          "$mainMod SHIFT, Space, exec, 1password --quick-access"
           "$mainMod SHIFT, S, exec, bemoji"
           "$mainMod, P, exec, wofi-pass"
           "$mainMod SHIFT, P, pseudo"
