@@ -28,6 +28,7 @@
             slack.enable = true;
             mako.enable = true;
             swww.enable = true;
+            rofi.enable = true;
         };
         programming = {
             utilities = {

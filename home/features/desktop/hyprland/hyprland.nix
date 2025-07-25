@@ -20,7 +20,8 @@ in {
           "waybar"
           "mako"
           "hypridle"
-          "wl-paste -p -t text --watch clipman store -P --histpath=\"~/.local/share/clipman-primary.json\""
+          "wl-paste --type text --watch cliphist store" # Stores only text data
+          "wl-paste --type image --watch cliphist store" # Stores only image data "wl-paste -p -t text --watch clipman store -P --histpath=\"~/.local/share/clipman-primary.json\""
           "sleep 5; bash ${config.xdg.dataFile."change_wallpaper.sh".source} &"
         ];
 
@@ -140,12 +141,13 @@ in {
           "$mainMod, M, exit"
           "$mainMod, F, fullscreen"
           "$mainMod, V, togglefloating"
-          "$mainMod, D, exec, wofi --show drun --allow-images"
-          "$mainMod SHIFT, Space, exec, 1password --quick-access"
-          "$mainMod SHIFT, M, exec, bemoji"
-          "$mainMod SHIFT, S, exec, grim -g "$(slurp)" | wl-copy"
+          "$mainMod, D, exec, rofi -show drun"
+          "$mainMod SHIFT, space, exec, 1password --quick-access"
+          "$mainMod SHIFT, m, exec, bemoji"
+          "$mainMod SHIFT, s, exec, grim -g \"$(slurp -d)\" - | wl-copy"
           "$mainMod, P, exec, wofi-pass"
           "$mainMod SHIFT, P, pseudo"
+          "$mainMod, Z, exec, zen"
           "$mainMod, J, movefocus, l"
           "$mainMod, L, movefocus, r"
           "$mainMod, I, movefocus, u"

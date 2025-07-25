@@ -13,7 +13,7 @@
     # installVimSyntax = true;
 
     settings = {
-      theme = "catppucin-macchiato";
+      # theme = "catppucin-macchiato";
       font-family = "Maple Mono NF CN";
       font-size = 11;
 
