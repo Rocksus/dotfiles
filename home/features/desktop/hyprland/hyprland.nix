@@ -175,12 +175,11 @@ in {
           "$mainMod, mouse_down, workspace, e+1"
           "$mainMod, mouse_up, workspace, e-1"
 
-          ", F1, exec, pamixer -t"
-          ", F2, exec, pamixer -d 5"
-          ", F3, exec, pamixer -i 5"
-          ", F5, exec, brightnessctl set 5%-"
-          ", F6, exec, brightnessctl set +5%"
-          ", F9, exec, codium ~/.dotfiles"
+          ", XF86AudioMute, exec, pamixer -t"
+          ", XF86AudioLowerVolume, exec, pamixer -d 5"
+          ", XF86AudioRaiseVolume, exec, pamixer -i 5"
+          ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
+          ", XF86MonBrightnessUp, exec, brightnessctl set +5%"
         ];
 
         bindm = [
