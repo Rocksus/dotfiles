@@ -174,6 +174,13 @@ in {
           "$mainMod SHIFT, 0, movetoworkspace, 10"
           "$mainMod, mouse_down, workspace, e+1"
           "$mainMod, mouse_up, workspace, e-1"
+
+          ", F1, exec, pamixer -t"
+          ", F2, exec, pamixer -d 5"
+          ", F3, exec, pamixer -i 5"
+          ", F5, exec, brightnessctl set 5%-"
+          ", F6, exec, brightnessctl set +5%"
+          ", F9, exec, codium ~/.dotfiles"
         ];
 
         bindm = [
