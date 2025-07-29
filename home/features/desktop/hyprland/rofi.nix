@@ -30,5 +30,13 @@ in {
       };
       # theme = "catppucin-macchiato";
     };
+    home.file.".config/rofi/scripts/next_wallpaper_rofi.sh" = mkIf config.features.desktop.swww.enable {
+      executable = true;
+      text = ''
+        #!/bin/sh
+        # This script changes the wallpaper using swww via Rofi.
+        ~/.local/share/xdg/next_wallpaper.sh
+      '';
+    };
   };
 }
