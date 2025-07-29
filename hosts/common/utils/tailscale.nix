@@ -11,7 +11,6 @@ in {
       useRoutingFeatures = "both";
       extraUpFlags = [
         "--accept-routes"
-        "--exit-node-allow-lan-access"
       ];
     };
   };
