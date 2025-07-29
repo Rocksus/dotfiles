@@ -14,8 +14,5 @@
         desktop = {
             fonts.enable = true;
         };
-        utils = {
-            tailscale.enable = true;
-        };
     };
 }
