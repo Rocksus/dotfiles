@@ -48,6 +48,9 @@
 
     # wallpaper management
     swww.url = "github:LGFae/swww";
+
+    # ditch your adobe and get this
+    affinity-nix.url = "github:mrshmllow/affinity-nix";
  };
 
   outputs = {

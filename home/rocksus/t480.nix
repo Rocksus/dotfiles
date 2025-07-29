@@ -7,6 +7,7 @@
         ../features/browsers
         ../features/programming
         ../features/desktop
+        ../features/design
     ];
 
     features = {
@@ -36,6 +37,11 @@
                 obsidian.enable = true;
                 dbeaver.enable = true;
             };
+        };
+        design = {
+            affinitydesigner.enable = true;
+            affinityphoto.enable = true;
+            affinitypublisher.enable = false;
         };
     };
 
