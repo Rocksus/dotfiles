@@ -6,6 +6,11 @@
         virtualenv
       ]))
 
+    pkg-config
+    meson
+    ninja
+    rustc
+
     pipenv
     poetry
   ];
