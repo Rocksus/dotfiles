@@ -41,6 +41,7 @@ in {
     };
     xdg.dataFile."next_wallpaper.sh" = {
       enable = true;
+      executable = true;
       text = ''
         set -e
         BG=`find ${../../../../lib/wallpapers} -name "*.jpg" -o -name "*.png" | shuf -n1`
