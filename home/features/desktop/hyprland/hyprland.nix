@@ -141,7 +141,7 @@ in {
           "$mainMod, M, exit"
           "$mainMod, F, fullscreen"
           "$mainMod, V, togglefloating"
-          "$mainMod, D, exec, rofi -show drun"
+          "$mainMod, D, exec, pkill anyrun || anyrun"
           "$mainMod SHIFT, space, exec, 1password --quick-access"
           "$mainMod SHIFT, m, exec, bemoji"
           "$mainMod SHIFT, s, exec, grim -g \"$(slurp -d)\" - | wl-copy"

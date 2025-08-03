@@ -29,7 +29,7 @@
             slack.enable = true;
             mako.enable = true;
             swww.enable = true;
-            rofi.enable = true;
+            anyrun.enable = true;
         };
         programming = {
             utilities = {

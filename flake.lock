@@ -57,13 +57,13 @@
       "locked": {
         "lastModified": 1748365336,
         "narHash": "sha256-pg0w4uOZI32dLASD6UbBezeQg5PwOa0GLv7rTwn3VxY=",
-        "owner": "Kirottu",
+        "owner": "anyrun-org",
         "repo": "anyrun",
         "rev": "25367153f225a59c5ce5746583e39a71ff052f09",
         "type": "github"
       },
       "original": {
-        "owner": "Kirottu",
+        "owner": "anyrun-org",
         "repo": "anyrun",
         "type": "github"
       }

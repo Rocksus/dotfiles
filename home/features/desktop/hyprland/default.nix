@@ -7,6 +7,7 @@
     ./mako.nix
     # ./wofi.nix
     ./rofi.nix
+    ./anyrun.nix
   ];
 
   home.packages = with pkgs; [
