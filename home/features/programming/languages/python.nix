@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    (python310.withPackages (ps:
+    (python311.withPackages (ps:
       with ps; [
         pip
         virtualenv
