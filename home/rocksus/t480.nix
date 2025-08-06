@@ -36,6 +36,7 @@
                 bruno.enable = true;
                 obsidian.enable = true;
                 dbeaver.enable = true;
+                postgres.enable = true;
             };
         };
         design = {
