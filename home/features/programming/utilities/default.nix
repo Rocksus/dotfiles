@@ -3,7 +3,7 @@
     ./bruno.nix
     ./obsidian.nix
     ./dbeaver.nix
-    ./postgtres.nix
+    ./postgres.nix
   ];
 
   home.packages = with pkgs; [

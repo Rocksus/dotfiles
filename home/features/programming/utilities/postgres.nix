@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.features.programming.utilities.postgresql;
+  cfg = config.features.programming.utilities.postgres;
 in {
-    options.features.programming.utilities.postgresql.enable =
+    options.features.programming.utilities.postgres.enable =
     mkEnableOption "enable postgresql";
 
     config = mkIf cfg.enable {
