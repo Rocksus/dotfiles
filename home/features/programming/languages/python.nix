@@ -6,6 +6,7 @@
         virtualenv
       ]))
 
+    libffi
     pkg-config
     meson
     ninja
