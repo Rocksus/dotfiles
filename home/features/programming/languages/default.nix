@@ -5,5 +5,6 @@
         ./node.nix
         ./rust.nix
         ./c.nix
+        ./nix.nix
     ];
 }

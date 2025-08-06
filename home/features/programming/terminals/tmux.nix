@@ -5,5 +5,7 @@
     historyLimit = 5000;
     newSession = true;
     terminal = "xterm-256color";
+    baseIndex = 1;
+    keyMode = "vi";
   };
 }

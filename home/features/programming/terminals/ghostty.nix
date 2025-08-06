@@ -35,7 +35,7 @@
       #  To resolve issues:
       #    1. https://github.com/ryan4yin/nix-config/issues/26
       #    2. https://github.com/ryan4yin/nix-config/issues/8
-      command = "zellij";
+      # command = "zellij";
     };
   };
 }
