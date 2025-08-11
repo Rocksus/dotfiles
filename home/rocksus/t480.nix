@@ -37,6 +37,7 @@
                 obsidian.enable = true;
                 dbeaver.enable = true;
                 postgres.enable = true;
+                cherry-studio.enable = true;
             };
         };
         design = {

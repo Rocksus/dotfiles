@@ -4,6 +4,7 @@
     ./obsidian.nix
     ./dbeaver.nix
     ./postgres.nix
+    ./cherry-studio.nix
   ];
 
   home.packages = with pkgs; [
