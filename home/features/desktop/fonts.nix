@@ -18,6 +18,11 @@ in {
       font-manager
       font-awesome_5
       noto-fonts
+      jetbrains-mono
+      # Symbol/Icon Fonts
+      material-design-icons # Another popular icon set
+      # CJK (Chinese, Japanese, Korean) Fonts
+      noto-fonts-cjk-sans # Very large, provides support for East Asian languages
     ];
   };
 }

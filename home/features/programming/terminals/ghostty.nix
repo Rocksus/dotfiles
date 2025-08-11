@@ -14,7 +14,7 @@
 
     settings = {
       # theme = "catppucin-macchiato";
-      font-family = "Maple Mono NF CN";
+      font-family = "JetBrains Mono NF";
       font-size = 11;
 
       background-opacity = 0.93;
