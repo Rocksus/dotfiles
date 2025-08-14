@@ -5,7 +5,7 @@
         pip
         virtualenv
       ]))
-
+    uv
     libffi
     pkg-config
     meson
