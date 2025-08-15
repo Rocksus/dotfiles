@@ -13,222 +13,188 @@ in {
     programs.waybar = {
       enable = true;
       style = ''
-        @define-color background-darker rgba(30, 31, 41, 230);
-        @define-color background #282a36;
-        @define-color selection #44475a;
-        @define-color foreground #f8f8f2;
-        @define-color comment #6272a4;
-        @define-color cyan #8be9fd;
-        @define-color green #50fa7b;
-        @define-color orange #ffb86c;
-        @define-color pink #ff79c6;
-        @define-color purple #bd93f9;
-        @define-color red #ff5555;
-        @define-color yellow #f1fa8c;
-
         * {
-            border: none;
-            border-radius: 0;
-            font-family: FiraCode Nerd Font;
-            font-weight: bold;
-            font-size: 14px;
-            min-height: 0;
+          font-family: "Fira Code";
         }
 
-        window#waybar {
-            background: rgba(21, 18, 27, 0);
-            color: #cdd6f4;
-        }
-
-        tooltip {
-            background: #1e1e2e;
-            border-radius: 10px;
-            border-width: 2px;
-            border-style: solid;
-            border-color: #11111b;
-        }
-
-        #workspaces button {
-            padding: 5px;
-            color: #313244;
-            margin-right: 5px;
-        }
-
-        #workspaces button.active {
-            color: #11111b;
-            background: #a6e3a1;
-            border-radius: 10px;
-        }
-
-        #workspaces button.focused {
-            color: #a6adc8;
-            background: #eba0ac;
-            border-radius: 10px;
-        }
-
-        #workspaces button.urgent {
-            color: #11111b;
-            background: #a6e3a1;
-            border-radius: 10px;
-        }
-
-        #workspaces button:hover {
-            background: #11111b;
-            color: #cdd6f4;
-            border-radius: 10px;
-        }
-
-        #custom-language,
-        #custom-updates,
-        #custom-caffeine,
-        #custom-weather,
-        #window,
-        #clock,
-        #battery,
-        #pulseaudio,
-        #network,
-        #workspaces,
-        #tray,
-        #backlight {
-            background: #1e1e2e;
-            padding: 0px 10px;
-            margin: 3px 0px;
-            margin-top: 10px;
-            border: 1px solid #181825;
-        }
-
-        #tray {
-            border-radius: 10px;
-            margin-right: 10px;
-        }
-
-        #workspaces {
-            background: #1e1e2e;
-            border-radius: 10px;
-            margin-left: 10px;
-            padding-right: 0px;
-            padding-left: 5px;
-        }
-
-        #custom-caffeine {
-            color: #89dceb;
-            border-radius: 10px 0px 0px 10px;
-            border-right: 0px;
-            margin-left: 10px;
-        }
-
-        #custom-language {
-            color: #f38ba8;
-            border-left: 0px;
-            border-right: 0px;
-        }
-
-        #custom-updates {
-            color: #f5c2e7;
-            border-left: 0px;
-            border-right: 0px;
-        }
-
-        #window {
-            border-radius: 10px;
-            margin-left: 60px;
-            margin-right: 60px;
+        #waybar {
+          background: #171717;
+          color: #fff;
         }
 
         #clock {
-            color: #fab387;
-            border-radius: 10px 0px 0px 10px;
-            margin-left: 0px;
-            border-right: 0px;
+          color: #fff;
+        }
+
+        #tray {
+          padding-left: 4px;
+        }
+
+        #workspaces button:hover {
+          background-color: transparent;
+        }
+
+        #workspaces button {
+          color: #737373;
+          padding-left: 4px;
+          padding-right: 4px;
+          border-radius: 0px;
+        }
+
+        #workspaces button:hover {
+          background-color: #262626;
+        }
+
+        #workspaces button.active {
+          color: #84cc16;
+        }
+
+        #window {
+          color: #fff;
         }
 
         #network {
-            color: #f9e2af;
-            border-left: 0px;
-            border-right: 0px;
+          color: #3b82f6;
+          margin-right: 8px;
         }
 
         #pulseaudio {
-            color: #89b4fa;
-            border-left: 0px;
-            border-right: 0px;
+          color: #14b8a6;
+          margin-right: 4px;
         }
 
-        #pulseaudio.microphone {
-            color: #cba6f7;
-            border-left: 0px;
-            border-right: 0px;
+        #cpu {
+          color: #0ea5e9;
+          margin-right: 4px;
         }
 
-        #battery {
-            color: #a6e3a1;
-            border-radius: 0 10px 10px 0;
-            margin-right: 10px;
-            border-left: 0px;
+        #temperature {
+          color: #eab308;
+          margin-right: 4px;
         }
 
-        #custom-weather {
-            border-radius: 0px 10px 10px 0px;
-            border-right: 0px;
-            margin-left: 0px;
+        #memory {
+          color: #d946ef;
+          margin-right: 4px;
+        }
+
+        #custom-powermenu {
+          color: #f43f5e;
         }
       '';
       settings = {
         mainbar = {
           layer = "top";
           position = "top";
-          mod = "dock";
-          exclusive = true;
-          passthrough = false;
-          gtk-layer-shell = true;
-          height = 0;
-          modules-left = ["clock" "custom/weather" "hyprland/workspaces"];
-          modules-center = ["hyprland/window"];
-          modules-right = [
+          "margin-bottom" = 0;
+          "modules-left" = [
+            "clock"
+            "custom/separator"
+            "hyprland/workspaces"
+            "custom/separator"
             "tray"
           ];
+          "modules-center" = [
+            "hyprland/window"
+          ];
+          "modules-right" = [
+            "temperature"
+            "memory"
+            "cpu"
+            "pulseaudio"
+            "battery"
+            "network"
+            "custom/separator"
+            "custom/powermenu"
+          ];
 
+          "custom/separator" = {
+            exec = "echo \"|\"";
+            format = "{}";
+          };
           "hyprland/window" = {
-            format = "👉 {}";
-            seperate-outputs = true;
+            format = "{}";
           };
           "hyprland/workspaces" = {
-            disable-scroll = true;
-            all-outputs = true;
-            on-click = "activate";
-            format = " {name} {icon} ";
-            on-scroll-up = "hyprctl dispatch workspace e+1";
-            on-scroll-down = "hyprctl dispatch workspace e-1";
-            format-icons = {
-              "1" = "";
-              "2" = "";
-              "3" = "";
-              "4" = "";
-              "5" = "";
-              "6" = "";
-              "7" = "";
+            format = "{icon}";
+            "separate-outputs" = false;
+            "active-only" = false;
+            "all-outputs" = false;
+            "format-icons" = {
+              "1" = "1";
+              "2" = "2";
+              "3" = "3";
+              "4" = "4";
+              "5" = "5";
+              "6" = "6";
+              "7" = "7";
+              "8" = "8";
+              "9" = "9";
+              "10" = "10";
+              "11" = "1";
+              "12" = "2";
+              "13" = "3";
+              "14" = "4";
+              "15" = "5";
+              "16" = "6";
+              "17" = "7";
+              "18" = "8";
+              "19" = "9";
+              "110" = "10";
             };
-            persistent_workspaces = {
-              "1" = [];
-              "2" = [];
-              "3" = [];
-              "4" = [];
-            };
-          };
-          "custom/weather" = {
-            format = "{}°C";
-            tooltip = true;
-            interval = 3600;
-            exec = "wttrbar --location Jakarta-Indonesia";
-            return-type = "json";
           };
           tray = {
-            icon-size = 13;
-            spacing = 10;
+            "icon-size" = 16;
+            spacing = 8;
           };
           clock = {
-            format = " {:%R   %d/%m}";
-            tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+            format = " 󰸗 {:%I:%M %p} ";
+            interval = 60;
+            tooltip = true;
+            "tooltip-format" = "{:%d %B %H:%M}";
+          };
+          network = {
+            format = " 󰖩";
+            "tooltip-format" = "{essid}";
+            interval = 2;
+          };
+          temperature = {
+            format = "{icon} {temperatureC}°C ";
+            "hwmon-path" = "/sys/class/hwmon/hwmon2/temp1_input";
+            "critical-threshold" = 80;
+            "format-icons" = [
+              ""
+              ""
+              ""
+            ];
+          };
+          memory = {
+            format = "󰫗 {}% ";
+            tooltip = "false";
+          };
+          cpu = {
+            format = " {usage}% ";
+            tooltip = "false";
+          };
+          pulseaudio = {
+            format = " {volume}%";
+            "scroll-step" = 1;
+            "on-click" = "pavucontrol";
+          };
+          battery = {
+            format = "{capacity}% {icon}";
+            "format-icons" = [
+              ""
+              ""
+              ""
+              ""
+              ""
+            ];
+          };
+          "custom/powermenu" = {
+            format = "  ";
+            tooltip = false;
+            "on-click" = "exec wlogout -p layer-shell";
           };
         };
       };
@@ -248,3 +214,5 @@ in {
     ];
   };
 }
+
+# https://github.com/maxhu08/dotfiles-old/blob/hyprland-dots/waybar/config
