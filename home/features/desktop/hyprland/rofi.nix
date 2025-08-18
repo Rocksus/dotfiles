@@ -20,7 +20,7 @@ in {
         ];
       };
       terminal = "\${pkgs.ghostty}/bin/ghostty";
-      font = "Fira Code";
+      font = "FiraCode Nerd Font";
       extraConfig = {
         show-icons = true;
         disable-history = false;

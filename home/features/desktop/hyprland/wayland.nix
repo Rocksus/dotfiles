@@ -163,9 +163,9 @@ in {
             "hwmon-path" = "/sys/class/hwmon/hwmon2/temp1_input";
             "critical-threshold" = 80;
             "format-icons" = [
-              ""
-              ""
-              ""
+              ""
+              ""
+              ""
             ];
           };
           memory = {
@@ -173,26 +173,26 @@ in {
             tooltip = "false";
           };
           cpu = {
-            format = " {usage}% ";
+            format = " {usage}% ";
             tooltip = "false";
           };
           pulseaudio = {
-            format = " {volume}%";
+            format = " {volume}%";
             "scroll-step" = 1;
             "on-click" = "pavucontrol";
           };
           battery = {
             format = "{capacity}% {icon}";
             "format-icons" = [
-              ""
-              ""
-              ""
-              ""
-              ""
+              ""
+              ""
+              ""
+              ""
+              ""
             ];
           };
           "custom/powermenu" = {
-            format = "  ";
+            format = "  ";
             tooltip = false;
             "on-click" = "exec wlogout -p layer-shell";
           };
