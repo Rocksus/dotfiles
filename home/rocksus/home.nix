@@ -52,7 +52,7 @@
       "github.com" = {
         hostname     = "github.com";
         user         = "git";
-        identityFile = [ "~/.ssh/id_personal" ];
+        identityFile = [ "/home/rocksus/.ssh/id_personal" ];
       };
       "github_verihubs" = {
         hostname     = "github.com";
