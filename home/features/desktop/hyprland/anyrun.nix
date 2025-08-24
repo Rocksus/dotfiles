@@ -8,7 +8,6 @@ in {
     programs.anyrun = {
       enable = true;
 
-      # keep your existing plugins/config; shown here for context only
       config = {
         x.fraction = 0.50;
         y.fraction = 0.28;
@@ -19,107 +18,76 @@ in {
         ignoreExclusiveZones = false;
         maxEntries = 12;
         plugins = [
-          # e.g. inputs.anyrun.packages.${pkgs.system}.applications
+          # An array of all the plugins you want, which either can be paths to the .so files, or their packages
+          inputs.anyrun.packages.${pkgs.system}.applications
         ];
       };
 
       extraCss = /* css */ ''
-        /* ---------- Theme tokens ---------- */
-        @define-color accent     #7c3aed;                  /* violet */
-        @define-color fg         #e6e7eb;                  /* foreground text */
-        @define-color muted      #9aa0a6;                  /* secondary text */
-        @define-color bg         rgba(15, 15, 18, 0.82);   /* panel backdrop */
-        @define-color bg-weak    rgba(255,255,255,0.05);   /* input bg */
-        @define-color border     rgba(255,255,255,0.10);   /* hairline */
+        /* --- Tokens (keep yours or these) --- */
+        @define-color accent  #7c3aed;
+        @define-color fg      #e6e7eb;
+        @define-color muted   #9aa0a6;
+        @define-color bg      rgba(15,15,18,0.86);
+        @define-color border  rgba(255,255,255,0.10);
 
-        /* ---------- Window & panel ---------- */
-        #window {
-          background: transparent; /* let the panel draw its own rounded bg */
-        }
-
+        /* --- Shell --- */
+        #window { background: transparent; }
         #main {
           background: @bg;
-          padding: 14px;
-          border-radius: 16px;
           border: 1px solid @border;
-          box-shadow:
-            0 18px 60px rgba(0,0,0,0.45),
-            0  4px 16px rgba(0,0,0,0.35);
+          border-radius: 16px;
+          padding: 14px;
+          box-shadow: 0 18px 60px rgba(0,0,0,0.45), 0 4px 16px rgba(0,0,0,0.35);
         }
 
-        /* ---------- Entry (search box) ---------- */
+        /* --- Entry --- */
         #entry {
-          background: @bg-weak;
+          background: rgba(255,255,255,0.06);
           border: 1px solid @border;
           border-radius: 12px;
           padding: 10px 12px;
           margin-bottom: 10px;
-          font: 12.5pt "Inter", "SF Pro Text", "Segoe UI", Roboto, sans-serif;
           color: @fg;
           caret-color: @accent;
+          font: 12.5pt "Inter","SF Pro Text","Segoe UI",Roboto,sans-serif;
         }
-        #entry:focus {
-          border: 1px solid alpha(@accent, 0.65);
-          box-shadow: 0 0 0 3px alpha(@accent, 0.18);
+        #entry:focus { border-color: alpha(@accent,0.65); box-shadow: 0 0 0 3px alpha(@accent,0.18); }
+
+        /* --- FIX THE WHITE SLAB (results container) --- */
+        /* Make all list containers transparent/dark */
+        scrolledwindow,
+        scrolledwindow > viewport,
+        list,
+        listview,
+        treeview,
+        #matches {
+          background: transparent;
+          border: none;
         }
 
-        /* ---------- Plugin header ---------- */
-        #plugin > label {
-          color: @muted;
-          font-weight: 600;
-          letter-spacing: 0.2px;
-          padding: 6px 2px 4px 2px;
+        /* Optional: give the results area a subtle dark panel */
+        #main > box:last-child {
+          background: rgba(255,255,255,0.03);
+          border: 1px solid @border;
+          border-radius: 12px;
+          padding: 6px;
         }
 
-        /* ---------- Matches list ---------- */
+        /* --- Rows --- */
         #match {
-          padding: 10px 10px;
+          padding: 10px;
           border-radius: 10px;
           background: transparent;
         }
-        #match:hover {
-          background: alpha(@accent, 0.08);
-        }
-        #match:selected {
-          background: alpha(@accent, 0.18);
-          outline: none;
-        }
+        #match:hover    { background: alpha(@accent, 0.08); }
+        #match:selected { background: alpha(@accent, 0.18); }
 
-        #match-title {
-          color: @fg;
-          font: 11.5pt "Inter", "SF Pro Text", "Segoe UI", Roboto, sans-serif;
-        }
-        #match-desc {
-          color: @muted;
-          font-size: 10pt;
-        }
+        #match-title { color: @fg;   font: 11.5pt "Inter","SF Pro Text","Segoe UI",Roboto,sans-serif; }
+        #match-desc  { color: @muted; font-size: 10pt; }
 
-        /* ---------- Icons ---------- */
-        #match image, #plugin image {
-          margin-right: 8px;
-          opacity: 0.95;
-          -gtk-icon-transform: scale(1.0);
-        }
-
-        /* ---------- Optional density tweaks ----------
-          Uncomment one block to change size profile.
-        */
-        /* Compact
-        #main { padding: 10px; }
-        #entry { padding: 8px 10px; }
-        #match { padding: 8px 8px; }
-        */
-
-        /* Roomy
-        #main { padding: 18px; }
-        #entry { padding: 12px 14px; }
-        #match { padding: 12px 12px; }
-        */
-
-        /* ---------- Optional OLED-dark ----------
-          Swap the panel background for deeper black.
-        */
-        /* #main { background: rgba(0,0,0,0.88); } */
+        /* Icons */
+        #match image, #plugin image { margin-right: 8px; opacity: 0.95; }
       '';
     };
   };
