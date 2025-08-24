@@ -1,7 +1,7 @@
 {
   programs.zellij = {
     enable = true;
-    attachExistingSession = true;
+    # attachExistingSession = true;
     # enableZshIntegration = true;
     settings = {
       theme = "catppuccin-macchiato";
