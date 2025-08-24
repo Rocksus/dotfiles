@@ -20,6 +20,10 @@ in {
         plugins = [
           # An array of all the plugins you want, which either can be paths to the .so files, or their packages
           inputs.anyrun.packages.${pkgs.system}.applications
+          # Calculator
+          inputs.anyrun.packages.${pkgs.system}.rink
+          # Search for Unicode Symbols
+          inputs.anyrun.packages.${pkgs.system}.symbols
         ];
       };
 
@@ -88,6 +92,37 @@ in {
 
         /* Icons */
         #match image, #plugin image { margin-right: 8px; opacity: 0.95; }
+
+        /* --- Ensure result titles are always visible --- */
+        #match,                     /* default text color for a row */
+        #match label,               /* labels inside a row */
+        #match-title {
+          color: @fg;
+          opacity: 1;
+        }
+
+        /* keep it visible on hover/selected too */
+        #match:hover label,
+        #match:selected label,
+        #match:hover #match-title,
+        #match:selected #match-title {
+          color: @fg;
+          opacity: 1;
+        }
+
+        /* descriptions stay muted (override the generic rule above) */
+        #match-desc,
+        #match:hover #match-desc,
+        #match:selected #match-desc {
+          color: @muted;
+          opacity: 1;
+        }
+
+        /* plugin headers */
+        #plugin > label {
+          color: @muted;
+          opacity: 1;
+        }
       '';
     };
   };
