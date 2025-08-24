@@ -6,6 +6,7 @@
     ./office.nix
     ./media.nix
     ./slack.nix
+    ./libnotify.nix
   ];
 
   home.packages = with pkgs; [

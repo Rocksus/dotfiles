@@ -30,6 +30,7 @@
             mako.enable = true;
             swww.enable = true;
             anyrun.enable = true;
+            libnotify.enable = true;
         };
         programming = {
             utilities = {
