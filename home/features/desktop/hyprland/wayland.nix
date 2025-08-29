@@ -103,7 +103,7 @@ in {
             "cpu"
             "pulseaudio"
             "battery"
-            "network"
+            "wifi"
             "custom/separator"
             "custom/powermenu"
           ];
@@ -153,10 +153,15 @@ in {
             tooltip = true;
             "tooltip-format" = "{:%d %B %H:%M}";
           };
-          network = {
-            format = " 󰖩";
-            "tooltip-format" = "{essid}";
-            interval = 2;
+          wifi = {
+            format = "{essid} ({signalStrength}%) ";
+            "format-wifi" = "{essid} ({signalStrength}%) ";
+            "format-ethernet" = "󰈀 {ipaddr}/{interface}";
+            "format-disconnected" = "";
+            "tooltip-format-wifi" = "{essid} ({signalStrength}%) {ipaddr}";
+            "tooltip-format-disconnected"= "Disconnected";
+            interval = 5;
+            "on-click" = "nmcli device wifi rescan && wpa_cli -i wlan0 reconfigure";
           };
           temperature = {
             format = "{icon} {temperatureC}°C ";

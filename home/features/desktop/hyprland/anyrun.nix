@@ -19,11 +19,11 @@ in {
         maxEntries = 12;
         plugins = [
           # An array of all the plugins you want, which either can be paths to the .so files, or their packages
-          inputs.anyrun.packages.${pkgs.system}.applications
+          "${pkgs.anyrun}/lib/libapplications.so"
           # Calculator
-          inputs.anyrun.packages.${pkgs.system}.rink
+          "${pkgs.anyrun}/lib/librink.so"
           # Search for Unicode Symbols
-          inputs.anyrun.packages.${pkgs.system}.symbols
+          "${pkgs.anyrun}/lib/libsymbols.so"
         ];
       };
 

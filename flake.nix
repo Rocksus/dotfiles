@@ -18,11 +18,6 @@
 
     # community wayland nixpkgs
     # nixpkgs-wayland.url = "github:nix-community/nixpkgs-wayland";
-    # anyrun - a wayland launcher
-    anyrun = {
-      url = "github:anyrun-org/anyrun";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     pre-commit-hooks = {
       url = "github:cachix/pre-commit-hooks.nix";
