@@ -32,7 +32,7 @@ in {
           }
           {
             timeout = 1800;
-            on-timeout = "systemctl suspend";
+            on-timeout = "systemd-ac-power -v | grep -q \"no\" && systemctl suspend";
           }
         ];
       };
