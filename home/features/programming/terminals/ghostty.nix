@@ -6,7 +6,7 @@
 {
   programs.ghostty = {
     enable = true;
-    package = inputs.ghostty.packages.${pkgs.system}.default; # the latest version
+    package = inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default; # the latest version
 
     enableZshIntegration = true;
     # clearDefaultKeybindings = true;

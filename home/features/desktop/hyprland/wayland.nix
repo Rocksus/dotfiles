@@ -103,7 +103,7 @@ in {
             "cpu"
             "pulseaudio"
             "battery"
-            "wifi"
+            "network"
             "custom/separator"
             "custom/powermenu"
           ];
@@ -153,7 +153,7 @@ in {
             tooltip = true;
             "tooltip-format" = "{:%d %B %H:%M}";
           };
-          wifi = {
+          network = {
             format = "{essid} ({signalStrength}%) ";
             "format-wifi" = "{essid} ({signalStrength}%) ";
             "format-ethernet" = "󰈀 {ipaddr}/{interface}";
@@ -189,11 +189,11 @@ in {
           battery = {
             format = "{capacity}% {icon}";
             "format-icons" = [
-              ""
-              ""
-              ""
-              ""
-              ""
+              " "
+              " "
+              " "
+              " "
+              " "
             ];
           };
           "custom/powermenu" = {
