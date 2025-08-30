@@ -216,6 +216,7 @@ in {
       wlogout
       wtype
       ydotool
+      brightnessctl
     ];
   };
 }
