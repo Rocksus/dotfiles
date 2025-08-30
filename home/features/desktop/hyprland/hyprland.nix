@@ -56,12 +56,6 @@ in {
         };
 
         decoration = {
-          "col.shadow" = "rgba(1E202966)";
-          drop_shadow = true;
-          shadow_range = 60;
-          shadow_offset = "1 2";
-          shadow_render_power = 3;
-          shadow_scale = 0.97;
           rounding = 8;
           blur = {
             enabled = true;

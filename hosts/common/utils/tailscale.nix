@@ -13,5 +13,7 @@ in {
         "--accept-routes"
       ];
     };
+    systemd.services.NetworkManager-wait-online.enable = false;
+    systemd.services.tailscaled.after = ["systemd-networkd-wait-online.service"];
   };
 }
