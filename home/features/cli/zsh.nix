@@ -17,7 +17,7 @@ in {
             sessionVariables = {
                 NIX_PATH = "nixpkgs=channel:nixos-unstable";
                 NIX_LOG  = "info";
-                TERMINAL = "ghostty";
+                TERMINAL = "kitty";
             };
             envExtra             = ''
                 export EDITOR=nvim

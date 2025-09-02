@@ -125,9 +125,9 @@ in {
         "$mainMod" = "SUPER";
 
         bind = [
-          "$mainMod, return, exec, ghostty"
-          "$mainMod, t, exec, ghostty"
-          "$mainMod SHIFT, e, exec, ghostty"
+          "$mainMod, return, exec, kitty"
+          "$mainMod, t, exec, kitty"
+          "$mainMod SHIFT, e, exec, kitty"
           "$mainMod, o, exec, thunar"
           "$mainMod, Escape, exec, wlogout -p layer-shell"
           "$mainMod, Space, togglefloating"
@@ -182,7 +182,7 @@ in {
         ];
 
         windowrulev2 = [
-          "workspace=1,class:(ghostty)"
+          "workspace=1,class:(kitty)"
           "workspace=3,opacity=1.0,class:(firefox)"
         ];
       };
