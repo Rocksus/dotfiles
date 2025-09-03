@@ -155,7 +155,7 @@ in {
           };
           network = {
             format = "{essid} ({signalStrength}%) ";
-            "format-wifi" = "{essid} ({signalStrength}%) ";
+            "format-wifi" = "  ({signalStrength}%)";
             "format-ethernet" = "󰈀 {ipaddr}/{interface}";
             "format-disconnected" = "";
             "tooltip-format-wifi" = "{essid} ({signalStrength}%) {ipaddr}";
@@ -187,7 +187,7 @@ in {
             "on-click" = "pavucontrol";
           };
           battery = {
-            format = "{capacity}% {icon}";
+            format = "{icon} {capacity}% ";
             "format-icons" = [
               " "
               " "
