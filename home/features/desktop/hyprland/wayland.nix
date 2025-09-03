@@ -155,7 +155,7 @@ in {
           };
           network = {
             format = "{essid} ({signalStrength}%) ";
-            "format-wifi" = "  ({signalStrength}%)";
+            "format-wifi" = " ({signalStrength}%)";
             "format-ethernet" = "󰈀 {ipaddr}/{interface}";
             "format-disconnected" = "";
             "tooltip-format-wifi" = "{essid} ({signalStrength}%) {ipaddr}";
@@ -182,12 +182,12 @@ in {
             tooltip = "false";
           };
           pulseaudio = {
-            format = " {volume}%";
+            format = " {volume}% ";
             "scroll-step" = 1;
             "on-click" = "pavucontrol";
           };
           battery = {
-            format = "{icon} {capacity}% ";
+            format = "{icon}{capacity}% ";
             "format-icons" = [
               " "
               " "
