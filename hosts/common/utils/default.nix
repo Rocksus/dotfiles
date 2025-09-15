@@ -1,8 +1,7 @@
 
 {
   pkgs,
-  config,
-  username,
+  inputs,
   ...
 }: {
   imports = [
@@ -17,6 +16,7 @@
     git
     neovim
     gnumake
+    inputs.agenix.packages.${system}.default
     xclip
   ];
 }
