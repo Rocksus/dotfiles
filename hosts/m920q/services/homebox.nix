@@ -1,7 +1,6 @@
 {
   services.homebox = {
     enable = true;
-    openFirewall = true;
   };
   systemd.services.homebox = {
     environment = {
