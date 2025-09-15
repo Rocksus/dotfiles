@@ -10,6 +10,7 @@ prev.n8n.overrideAttrs (oldAttrs: rec {
   };
 
   pnpmDeps = prev.pnpm.fetchDeps {
+    # https://nixos.org/manual/nixpkgs/stable/#javascript-pnpm-fetcherVersion
     fetcherVersion = 1;
     pname = oldAttrs.pname;
     inherit version src;
