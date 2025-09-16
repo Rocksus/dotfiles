@@ -9,7 +9,7 @@ in {
   services.homebox = {
     enable = true;
     settings = {
-      HBOX_WEB_PORT = port;
+      HBOX_WEB_PORT = toString port;
     };
   };
   systemd.services.homebox = {
