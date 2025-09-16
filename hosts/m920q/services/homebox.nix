@@ -17,7 +17,7 @@ in {
       # see https://homebox.software/en/configure/ for options
     };
   };
-  networking.firewall = lib.mkIf config.openFirewall {
+  networking.firewall = {
     allowedTCPPorts = [ port ];
   };
 }
