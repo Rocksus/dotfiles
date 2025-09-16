@@ -10,6 +10,7 @@ in {
     enable = true;
     settings = {
       HBOX_WEB_PORT = toString port;
+      HBOX_OPTIONS_ALLOW_REGISTRATION = "true";
     };
   };
   systemd.services.homebox = {
