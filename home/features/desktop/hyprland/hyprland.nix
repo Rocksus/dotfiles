@@ -86,9 +86,7 @@ in {
 
         master = {};
 
-        gestures = {
-          workspace_swipe = false;
-        };
+        gesture = "3, horizontal, workspace";
 
         windowrule = [
           "float,class:file_progress"
