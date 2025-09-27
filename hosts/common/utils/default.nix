@@ -18,5 +18,6 @@
     gnumake
     inputs.agenix.packages.${system}.default
     xclip
+    cacert
   ];
 }
