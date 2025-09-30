@@ -39,6 +39,7 @@
                 dbeaver.enable = true;
                 postgres.enable = true;
                 cherry-studio.enable = true;
+                devenv.enable = true;
             };
         };
         design = {
