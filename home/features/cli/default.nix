@@ -2,6 +2,7 @@
     imports = [
         ./zsh.nix
         ./fzf.nix
+        ./helix.nix
     ];
 
     programs.zoxide = {

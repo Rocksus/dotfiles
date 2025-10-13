@@ -17,6 +17,7 @@
         cli = {
             zsh.enable = true;
             fzf.enable = true;
+            helix.enable = true;
         };
         desktop = {
             hyprland.enable = true;
