@@ -3,6 +3,7 @@
         ./zsh.nix
         ./fzf.nix
         ./helix.nix
+        ./yazi.nix
     ];
 
     programs.zoxide = {

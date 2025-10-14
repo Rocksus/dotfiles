@@ -18,6 +18,7 @@
             zsh.enable = true;
             fzf.enable = true;
             helix.enable = true;
+            yazi.enable = true;
         };
         desktop = {
             hyprland.enable = true;
@@ -41,6 +42,7 @@
                 postgres.enable = true;
                 cherry-studio.enable = true;
                 devenv.enable = true;
+                duckdb.enable = true;
             };
         };
         design = {
