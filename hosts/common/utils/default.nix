@@ -14,6 +14,7 @@
 
   environment.systemPackages = with pkgs; [
     git
+    neovim
     gnumake
     inputs.agenix.packages.${system}.default
     xclip
