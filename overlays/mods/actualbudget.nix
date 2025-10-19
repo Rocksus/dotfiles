@@ -6,12 +6,12 @@ prev.actual.overrideAttrs (oldAttrs: rec {
     owner = "actualbudget";
     repo = "actual";
     rev = "${version}";
-    hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+    hash = "";
   };
 
   # https://nixos.org/manual/nixpkgs/stable/#javascript-yarn-v3-v4
   offlineCache = prev.yarn-berry.fetchYarnBerryDeps {
     inherit (oldAttrs) src;
-    hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+    hash = "";
   };
 })
