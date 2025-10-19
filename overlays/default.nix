@@ -8,7 +8,7 @@
   modifications = final: prev:
     {
       n8n = import ./mods/n8n.nix {inherit prev;};
-      actual-server = import ./mods/actualbudget.nix {inherit prev;};
+      actual-server = import ./mods/actual-server {inherit prev;};
     };
 
   stable-packages = final: _prev: {
