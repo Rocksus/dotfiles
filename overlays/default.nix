@@ -8,6 +8,7 @@
   modifications = final: prev:
     {
       n8n = import ./mods/n8n.nix {inherit prev;};
+      actual = import ./mods/actualbudget.nix {inherit prev;};
     };
 
   stable-packages = final: _prev: {
