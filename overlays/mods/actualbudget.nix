@@ -6,14 +6,17 @@ prev.actual.overrideAttrs (oldAttrs: rec {
     owner = "actualbudget";
     repo = "actual";
     rev = "${version}";
-    hash = "";
+    hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
   };
 
-  pnpmDeps = prev.pnpm.fetchDeps {
-    # https://nixos.org/manual/nixpkgs/stable/#javascript-pnpm-fetcherVersion
-    fetcherVersion = 1;
-    pname = oldAttrs.pname;
-    inherit version src;
-    hash = "sha256-1nH+M4UmhdyfseLwBVx+lDX5cYnAH8D944ck4u3uvXg=";
+  nativeBuildInputs = [
+    prev.nodejs
+    prev.yarn-berry_4.yarnBerryConfigHook
+  ];
+
+  # https://nixos.org/manual/nixpkgs/stable/#javascript-yarn-v3-v4
+  offlineCache = prev.yarn-berry_4.fetchYarnBerryDeps {
+    inherit (oldAttrs) src;
+    hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
   };
 })

@@ -2,6 +2,7 @@
   imports = [
     ./containers
     ./n8n.nix
+    ./actualbudget.nix
     ./homebox.nix
   ];
   services = {
