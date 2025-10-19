@@ -6,7 +6,7 @@ prev.actual-server.overrideAttrs (oldAttrs: rec {
     owner = "actualbudget";
     repo = "actual";
     rev = "${version}";
-    hash = "";
+    hash = "sha256-VzILbBm1et5YVkbNPUtZT9ne+XuKSooOjk8rUybWkaM=";
   };
 
   # https://nixos.org/manual/nixpkgs/stable/#javascript-yarn-v3-v4
