@@ -1,5 +1,5 @@
 {prev}:
-prev.actual.overrideAttrs (oldAttrs: rec {
+prev.actual-server.overrideAttrs (oldAttrs: rec {
   version = "v25.10.0";
 
   src = prev.fetchFromGitHub {
