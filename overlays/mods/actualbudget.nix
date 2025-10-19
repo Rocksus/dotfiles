@@ -9,13 +9,8 @@ prev.actual.overrideAttrs (oldAttrs: rec {
     hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
   };
 
-  nativeBuildInputs = [
-    prev.nodejs
-    prev.yarn-berry_4.yarnBerryConfigHook
-  ];
-
   # https://nixos.org/manual/nixpkgs/stable/#javascript-yarn-v3-v4
-  offlineCache = prev.yarn-berry_4.fetchYarnBerryDeps {
+  offlineCache = prev.yarn-berry.fetchYarnBerryDeps {
     inherit (oldAttrs) src;
     hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
   };
