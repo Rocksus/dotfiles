@@ -9,9 +9,10 @@ prev.actual-server.overrideAttrs (oldAttrs: rec {
     hash = "sha256-VzILbBm1et5YVkbNPUtZT9ne+XuKSooOjk8rUybWkaM=";
   };
 
+  missingHashes = ./missing-hashes.json;
   # https://nixos.org/manual/nixpkgs/stable/#javascript-yarn-v3-v4
   offlineCache = prev.yarn-berry.fetchYarnBerryDeps {
-    inherit (oldAttrs) src;
+    inherit (oldAttrs) src missingHashes;
     hash = "";
   };
 })
