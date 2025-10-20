@@ -10,8 +10,7 @@ in {
     config = mkIf cfg.enable {
         programs.zsh = {
             enable = true;
-            enableCompletion = true;
-            syntaxHighlighting.enable = true;
+            enableGlobalCompInit = true;
 
             sessionVariables = {
                 NIX_PATH = "nixpkgs=channel:nixos-unstable";
@@ -22,12 +21,22 @@ in {
                 export EDITOR=nvim
             '';
 
-            oh-my-zsh = {
+            ohMyZsh = {
                 enable = true;
                 plugins = [
                     "git"
                 ];
-                theme = "robbyrussell";
+                theme = "agnoster";
+                
+                customPkgs = with pkgs; [
+                    zsh-git-prompt
+                    zsh-nix-shell
+                    zsh-vi-mode
+                    zsh-completions
+                    zsh-command-time
+                    zsh-fast-syntax-highlighting
+                    nix-zsh-completions
+                ];
             };
 
             # Commands to run at login (e.g. when your user logs in)
