@@ -1,0 +1,58 @@
+{config, ...}:{
+  services.traefik = {
+    enable = true;
+    staticConfigOptions = {
+      log = {
+        level = "WARN";
+      };
+      api = {
+        dashboard = true;
+      };
+      entryPoints = {
+        web = {
+          address = ":80";
+          # todo: check middleware for crowdsec, authentik
+          http.redirections.entryPoint = {
+            to = "websecure";
+            scheme = "https";
+          };
+        };
+        websecure = {
+          address = ":443";
+        };
+      };
+      certificateResolvers = {
+        cloudflare = {
+          acme = {
+            email = "rayantonius+cf@gmail.com";
+            storage = "/var/lib/traefik/acme.json";
+            dnsChallenge = {
+              provider = "cloudflare";
+              resolvers = [
+                "1.1.1.1:53"
+                "1.0.0.1:53"
+              ];
+              propagation.delayBeforeChecks = 30;
+            };
+          };
+        };
+      };
+    };
+    dynamicConfigOptions = {
+      routers = {
+        api = {
+          rule = "Host(`tr.home.rayantonius.com`)";
+          service = "api@internal";
+          entrypoints = ["websecure"];
+          tls = {
+            certResolver = "cloudflare";
+          };
+        };
+      };
+    };
+  };
+  systemd.services.traefik.serviceConfig = {
+    EnvironmentFile = [config.age.secrets.m920q-traefik-env.path];
+  };
+  networking.firewall.allowedTCPPorts = [80 443];
+}

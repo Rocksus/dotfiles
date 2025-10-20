@@ -1,11 +1,31 @@
-{
+let
+  port = 5006; 
+in {
   services = {
     actual = {
       enable = true;
-      openFirewall = true;
+      # uncomment if you want to connect directly
+      # openFirewall = true;
       settings = {
-        port = 5006;
+        port = port;
       };
+    };
+  };
+
+  # enable to add actual budget to traefik
+  services.traefik.dynamicConfigOptions.http = {
+    services.n8n.loadBalancer.servers = [
+      {
+        url = "https://localhost:${port}";
+      }
+    ];
+    routers.n8n = {
+      rule = "Host(`n8n.home.rayantonius.com`)";
+      tls = {
+        certResolver = "cloudflare";
+      };
+      service = "n8n";
+      entrypoints = "websecure";
     };
   };
 }
