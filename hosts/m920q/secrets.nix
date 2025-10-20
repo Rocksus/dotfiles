@@ -13,7 +13,7 @@
                 path = "/etc/wireguard/SG.conf";
             };
             m920q-traefik-env = {
-                file = "../../secrets/m920q-traefik-env.age";
+                file = ../../secrets/m920q-traefik-env.age;
                 owner = "traefik";
             };
         };

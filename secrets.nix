@@ -18,9 +18,9 @@ let
     ];
 
 in {
-    "wg-ID.age".publicKeys = systems ++ users;
-    "wg-SG.age".publicKeys = systems ++ users;
-    "wg-VH.age".publicKeys = systems ++ users;
-    "tailscale-key.age".publicKeys = systems ++ users;
-    "m920q-traefik-env.age".publicKeys = [rocksus m920q];
+    "secrets/wg-ID.age".publicKeys = systems ++ users;
+    "secrets/wg-SG.age".publicKeys = systems ++ users;
+    "secrets/wg-VH.age".publicKeys = systems ++ users;
+    "secrets/tailscale-key.age".publicKeys = systems ++ users;
+    "secrets/m920q-traefik-env.age".publicKeys = [m920q rocksus];
 }
