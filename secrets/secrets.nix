@@ -22,5 +22,5 @@ in {
     "wg-SG.age".publicKeys = systems ++ users;
     "wg-VH.age".publicKeys = systems ++ users;
     "tailscale-key.age".publicKeys = systems ++ users;
-    "m920q-traefik-env.age".publicKeys = [rocksus m290q];
+    "m920q-traefik-env.age".publicKeys = [rocksus m920q];
 }
