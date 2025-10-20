@@ -18,7 +18,7 @@ in {
   services.traefik.dynamicConfigOptions.http = {
     services.homebox.loadBalancer.servers = [
       {
-        url = "https://localhost:${port}";
+        url = "https://localhost:${toString port}";
       }
     ];
     routers.homebox = {
