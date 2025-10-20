@@ -1,7 +1,7 @@
 {
   imports = [
     ./containers
-    ./traefix.nix
+    ./traefik.nix
     ./n8n.nix
     ./actualbudget.nix
     ./homebox.nix
