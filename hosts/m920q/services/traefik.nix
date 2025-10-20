@@ -26,6 +26,7 @@
           acme = {
             email = "rayantonius+cf@gmail.com";
             storage = "/var/lib/traefik/acme.json";
+            caserver = "https://acme-v02.api.letsencrypt.org/directory";
             dnsChallenge = {
               provider = "cloudflare";
               resolvers = [
