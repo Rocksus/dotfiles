@@ -21,7 +21,7 @@
           address = ":443";
         };
       };
-      certificateResolvers = {
+      certificatesResolvers = {
         cloudflare = {
           acme = {
             email = "rayantonius+cf@gmail.com";
