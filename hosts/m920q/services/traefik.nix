@@ -52,7 +52,7 @@
     };
   };
   systemd.services.traefik.serviceConfig = {
-    EnvironmentFile = [config.age.secrets.m920q-traefik-env.path];
+    EnvironmentFile = ["${config.age.secrets.m920q-traefik-env.path}"];
   };
   networking.firewall.allowedTCPPorts = [80 443];
 }
