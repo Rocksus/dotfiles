@@ -13,7 +13,7 @@
                 path = "/etc/wireguard/SG.conf";
             };
             m920q-traefik-env = {
-                file = "../../secrets/m9w0q-traefik-env";
+                file = "../../secrets/m920q-traefik-env";
             };
         };
     };
