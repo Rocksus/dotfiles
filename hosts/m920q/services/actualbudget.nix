@@ -22,7 +22,7 @@ in {
     routers.budget = {
       rule = "Host(`budget.home.rayantonius.com`)";
       tls = {
-        certResolver = "cloudflare";
+        certResolver = "tailscale";
       };
       service = "budget";
       entrypoints = "websecure";

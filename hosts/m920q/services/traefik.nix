@@ -22,13 +22,16 @@
         };
       };
       certificatesResolvers = {
+        tailscale = {
+          tailscale = {};
+        };
         cloudflare = {
           acme = {
             email = "rayantonius+cf@gmail.com";
             storage = "/var/lib/traefik/acme.json";
             caserver = "https://acme-v02.api.letsencrypt.org/directory";
             dnsChallenge = {
-              provider = "cloudflare";
+              provider = "tailscale";
               resolvers = [
                 "1.1.1.1:53"
                 "1.0.0.1:53"
