@@ -31,7 +31,7 @@
             storage = "/var/lib/traefik/acme.json";
             caserver = "https://acme-v02.api.letsencrypt.org/directory";
             dnsChallenge = {
-              provider = "tailscale";
+              provider = "cloudflare";
               resolvers = [
                 "1.1.1.1:53"
                 "1.0.0.1:53"
@@ -50,7 +50,7 @@
             service = "api@internal";
             entrypoints = ["websecure"];
             tls = {
-              certResolver = "cloudflare";
+              certResolver = "tailscale";
             };
           };
         };
