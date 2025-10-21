@@ -17,7 +17,7 @@
     routers.n8n = {
       rule = "Host(`n8n.home.rayantonius.com`)";
       tls = {
-        certResolver = "tailscale";
+        certResolver = "cloudflare";
       };
       service = "n8n";
       entrypoints = "websecure";

@@ -24,7 +24,7 @@ in {
     routers.homebox = {
       rule = "Host(`homebox.home.rayantonius.com`)";
       tls = {
-        certResolver = "tailscale";
+        certResolver = "cloudflare";
       };
       service = "homebox";
       entrypoints = "websecure";

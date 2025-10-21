@@ -22,9 +22,6 @@
         };
       };
       certificatesResolvers = {
-        tailscale = {
-          tailscale = {};
-        };
         cloudflare = {
           acme = {
             email = "rayantonius+cf@gmail.com";
@@ -50,7 +47,7 @@
             service = "api@internal";
             entrypoints = ["websecure"];
             tls = {
-              certResolver = "tailscale";
+              certResolver = "cloudflare";
             };
           };
         };
