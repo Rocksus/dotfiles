@@ -14,17 +14,17 @@ in {
 
   # enable to add actual budget to traefik
   services.traefik.dynamicConfigOptions.http = {
-    services.n8n.loadBalancer.servers = [
+    services.budget.loadBalancer.servers = [
       {
         url = "https://localhost:${toString port}";
       }
     ];
-    routers.n8n = {
-      rule = "Host(`n8n.home.rayantonius.com`)";
+    routers.budget = {
+      rule = "Host(`budget.home.rayantonius.com`)";
       tls = {
         certResolver = "cloudflare";
       };
-      service = "n8n";
+      service = "budget";
       entrypoints = "websecure";
     };
   };
