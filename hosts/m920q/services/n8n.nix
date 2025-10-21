@@ -11,7 +11,7 @@
   services.traefik.dynamicConfigOptions.http = {
     services.n8n.loadBalancer.servers = [
       {
-        url = "https://localhost:5678";
+        url = "http://localhost:5678";
       }
     ];
     routers.n8n = {
