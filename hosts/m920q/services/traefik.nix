@@ -3,7 +3,7 @@
     enable = true;
     staticConfigOptions = {
       log = {
-        level = "WARN";
+        level = "DEBUG";
       };
       api = {
         dashboard = true;
