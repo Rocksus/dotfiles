@@ -40,13 +40,15 @@
       };
     };
     dynamicConfigOptions = {
-      routers = {
-        api = {
-          rule = "Host(`tr.home.rayantonius.com`)";
-          service = "api@internal";
-          entrypoints = ["websecure"];
-          tls = {
-            certResolver = "cloudflare";
+      http = {
+        routers = {
+          api = {
+            rule = "Host(`tr.home.rayantonius.com`)";
+            service = "api@internal";
+            entrypoints = ["websecure"];
+            tls = {
+              certResolver = "cloudflare";
+            };
           };
         };
       };
