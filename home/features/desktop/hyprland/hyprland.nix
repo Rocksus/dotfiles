@@ -125,7 +125,7 @@ in {
         bind = [
           "$mainMod, return, exec, kitty"
           "$mainMod, t, exec, kitty"
-          "$mainMod, `, exec, kitten quick-access-terminal"
+          "$mainMod, grave, exec, kitten quick-access-terminal"
           "$mainMod SHIFT, e, exec, kitty"
           "$mainMod, e, exec, thunar"
           "$mainMod, Escape, exec, wlogout -p layer-shell"
