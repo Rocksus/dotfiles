@@ -7,6 +7,7 @@
     ./cherry-studio.nix
     ./devenv.nix
     ./duckdb.nix
+    ./flyctl.nix
   ];
 
   home.packages = with pkgs; [

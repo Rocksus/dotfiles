@@ -43,6 +43,7 @@
                 cherry-studio.enable = true;
                 devenv.enable = true;
                 duckdb.enable = true;
+                flyctl.enable = true;
             };
         };
         design = {
