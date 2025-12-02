@@ -1,6 +1,6 @@
 {prev}:
 prev.n8n.overrideAttrs (oldAttrs: rec {
-  version = "1.102.3";
+  version = "1.121.3";
 
   src = prev.fetchFromGitHub {
     owner = "n8n-io";
