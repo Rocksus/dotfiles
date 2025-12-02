@@ -1,6 +1,6 @@
 {prev}:
 prev.actual-server.overrideAttrs (oldAttrs: rec {
-  version = "v25.10.0";
+  version = "v25.11.0";
 
   src = prev.fetchFromGitHub {
     owner = "actualbudget";
