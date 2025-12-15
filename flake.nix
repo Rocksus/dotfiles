@@ -56,6 +56,7 @@
   outputs = {
     self,
     home-manager,
+    authentik-nix,
     disko,
     ghostty,
     nixpkgs,
