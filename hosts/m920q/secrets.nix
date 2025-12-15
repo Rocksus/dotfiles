@@ -16,6 +16,9 @@
                 file = ../../secrets/m920q-traefik-env.age;
                 owner = "traefik";
             };
+            m920q-authentik-env = {
+                file = ../../secrets/m920q-authentik-env.age;
+            };
         };
     };
 }
