@@ -23,4 +23,5 @@ in {
     "secrets/wg-VH.age".publicKeys = systems ++ users;
     "secrets/tailscale-key.age".publicKeys = systems ++ users;
     "secrets/m920q-traefik-env.age".publicKeys = [m920q rocksus];
+    "secrets/m920q-authentik-env.age".publicKeys = [m920q rocksus];
 }

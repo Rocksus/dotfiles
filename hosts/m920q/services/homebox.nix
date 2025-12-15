@@ -1,8 +1,3 @@
-{ 
-  lib, 
-  config, 
-  ... 
-}:
 let
   port = 7745;
 in {

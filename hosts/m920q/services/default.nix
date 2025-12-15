@@ -5,6 +5,7 @@
     ./n8n.nix
     ./actualbudget.nix
     ./homebox.nix
+    ./authentik.nix
   ];
   services = {
     gnome.gnome-keyring.enable = true;

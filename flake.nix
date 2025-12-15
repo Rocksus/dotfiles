@@ -46,6 +46,11 @@
 
     # ditch your adobe and get this
     affinity-nix.url = "github:mrshmllow/affinity-nix";
+
+    authentik-nix = {
+      url = "github:nix-community/authentik-nix";
+      inputs.nixpkgs.follows = "nixpkgs"
+    };
  };
 
   outputs = {

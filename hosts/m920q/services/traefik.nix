@@ -11,7 +11,7 @@
       entryPoints = {
         web = {
           address = ":80";
-          # todo: check middleware for crowdsec, authentik
+          # todo: check middleware for crowdsec
           http.redirections.entryPoint = {
             to = "websecure";
             scheme = "https";
