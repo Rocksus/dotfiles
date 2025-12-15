@@ -92,6 +92,7 @@
           ./hosts/m920q
           inputs.disko.nixosModules.disko
           agenix.nixosModules.default
+          inputs.authentik-nix.nixosModules.default
         ];
       };
       lv001 = nixpkgs.lib.nixosSystem {
