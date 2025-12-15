@@ -22,6 +22,7 @@
       outputs.overlays.stable-packages
 
       inputs.rust-overlay.overlays.default
+      inputs.authentik-nix.nixosModules.default
 
       # You can also add overlays exported from other flakes:
       # neovim-nightly-overlay.overlays.default
