@@ -6,7 +6,7 @@ prev.actual-server.overrideAttrs (oldAttrs: rec {
     owner = "actualbudget";
     repo = "actual";
     rev = "${version}";
-    hash = "";
+    hash = "sha256-Skpfhhxd8MUoVpwPv4j8/bnFYYEAJkjKN2g1HVwWH/w=";
   };
 
   missingHashes = ./missing-hashes.json;
