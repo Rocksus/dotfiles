@@ -2,7 +2,9 @@
   services = {
     n8n = {
       enable = true;
-      webhookUrl = "https://n8n.home.rayantonius.com/";
+      environment = {
+        WEBHOOK_URL = "https://n8n.home.rayantonius.com/";
+      };
       # uncomment if you want to connect directly.
       # openFirewall = true;
     };
