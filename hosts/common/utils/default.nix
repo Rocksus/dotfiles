@@ -16,7 +16,7 @@
     git
     neovim
     gnumake
-    inputs.agenix.packages.${system}.default
+    inputs.agenix.packages.${pkgs.system}.default
     xclip
     cacert
     libjpeg
