@@ -38,8 +38,12 @@
   # git config
   programs.git = {
     enable = true;
-    userName = "Ray Antonius";
-    userEmail = "rayantonius@gmail.com";
+    settings = {
+      user = {
+        email = "rayantonius@gmail.com";
+        name = "Ray Antonius";
+      };
+    };
   };
   
   # Let Home Manager install and manage itself.
@@ -47,6 +51,7 @@
 
   programs.ssh = {
     enable = true;
+    enableDefaultConfig = false;
 
     matchBlocks = {
       "github.com" = {
