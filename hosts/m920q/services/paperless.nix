@@ -5,6 +5,7 @@ in {
     enable = true;
     port = port;
     database.createLocally = true;
+    address = "https://papers.home.rayantonius.com/"
     # Add other necessary configurations here based on user requirements or defaults
     # For a basic setup, enable and port might be sufficient.
     # Other options can be added later if needed.
