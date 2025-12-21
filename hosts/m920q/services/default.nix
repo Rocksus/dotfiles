@@ -5,6 +5,7 @@
     ./n8n.nix
     ./actualbudget.nix
     ./homebox.nix
+    ./authentik.nix
     ./paperless.nix
   ];
   services = {
