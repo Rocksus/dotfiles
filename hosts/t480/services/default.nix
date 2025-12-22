@@ -7,5 +7,11 @@
   ];
   services = {
     gnome.gnome-keyring.enable = true;
+
+    logind = {
+      lidSwitch = "ignore";
+      lidSwitchDocked = "ignore";
+      lidSwitchExternalPower = "ignore";
+    };
   };
 }
