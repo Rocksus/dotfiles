@@ -7,6 +7,7 @@
     ./homebox.nix
     ./authentik.nix
     ./paperless.nix
+    ./audiobookshelf.nix
   ];
   services = {
     gnome.gnome-keyring.enable = true;
