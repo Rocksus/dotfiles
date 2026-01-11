@@ -6,7 +6,6 @@ in {
       enable = true;
       # openFirewall = false;
       # user = "audiobookshelf";
-      host = "books.home.rayantonius.com";
     };
   };
 
