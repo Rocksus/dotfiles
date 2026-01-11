@@ -17,7 +17,7 @@ in {
         pdfa_image_compression = "lossless";
       };
       PAPERLESS_URL = "https://paperless.example.com";
-    }
+    };
   };
 
   # add paperless to traefik routes
