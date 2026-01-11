@@ -12,12 +12,12 @@ in {
 
   # enable to add audiobookshelf to traefik
   services.traefik.dynamicConfigOptions.http = {
-    services.n8n.loadBalancer.servers = [
+    services.audiobookshelf.loadBalancer.servers = [
       {
         url = "http://localhost:${toString port}";
       }
     ];
-    routers.n8n = {
+    routers.audiobookshelf = {
       rule = "Host(`books.home.rayantonius.com`)";
       tls = {
         certResolver = "cloudflare";
