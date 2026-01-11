@@ -4,8 +4,10 @@ in {
   services = {
     audiobookshelf = {
       enable = true;
+      port = port;
       # openFirewall = false;
       # user = "audiobookshelf";
+      # host = "127.0.0.1";
     };
   };
 
