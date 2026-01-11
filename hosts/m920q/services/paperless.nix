@@ -16,7 +16,7 @@ in {
         optimize = 1;
         pdfa_image_compression = "lossless";
       };
-      PAPERLESS_URL = "https://paperless.example.com";
+      PAPERLESS_URL = "https://papers.home.rayantonius.com";
     };
   };
 
