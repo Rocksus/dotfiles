@@ -102,7 +102,6 @@ in {
           "float,class:Lxappearance"
           "float,class:Wofi"
           "float,class:mako"
-          "animation:none,class:Wofi"
           "float,class:viewnior"
           "float,class:feh"
           "float,class:pavucontrol-qt"
@@ -111,13 +110,9 @@ in {
           "fullscreen,class:wlogout"
           "float,title:wlogout"
           "fullscreen,title:wlogout"
-          "idleinhibit:focus,class:mpv"
-          "idleinhibit:fullscreen,class:firefox"
           "float,title:^(Media viewer)$"
           "float,title:^(Volume Control)$"
           "float,title:^(Picture-in-Picture)$"
-          "size:800:600,title:^(Volume Control)$"
-          "move:75:44%,title:^(Volume Control)$"
         ];
 
         "$mainMod" = "SUPER";
@@ -183,6 +178,9 @@ in {
         windowrulev2 = [
           "workspace=1,class:(kitty)"
           "workspace=3,opacity=1.0,class:(firefox)"
+          "idleinhibit,fullscreen,class:(firefox)"
+          "size 800 600,title:(^(Volume Control)$)"
+          "move 75 44%,title:(^(Volume Control)$)"
         ];
       };
     };
