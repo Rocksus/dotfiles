@@ -16,7 +16,7 @@ in {
   options.features.desktop.swww.enable = mkEnableOption "swww config";
 
   config = mkIf cfg.enable {
-    home.packages = [inputs.swww.packages.${pkgs.system}.swww];
+    home.packages = [inputs.swww.packages.${pkgs.stdenv.hostPlatform.system}.swww];
 
     xdg.dataFile."change_wallpaper.sh" = {
       enable = true;

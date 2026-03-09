@@ -13,7 +13,7 @@ in {
 
     config = mkIf cfg.enable {
         home.packages = [
-            inputs.affinity-nix.packages.${pkgs.system}.designer
+            inputs.affinity-nix.packages.${pkgs.stdenv.hostPlatform.system}.designer
         ];
     };
 }

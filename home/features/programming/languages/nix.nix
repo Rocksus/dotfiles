@@ -4,7 +4,7 @@
     packages = with pkgs; [ 
       # nix formatter
       # https://github.com/NixOS/nixfmt
-      pkgs.nixfmt-rfc-style 
+      pkgs.nixfmt
 
       # lsp
       # https://github.com/nix-community/nixd

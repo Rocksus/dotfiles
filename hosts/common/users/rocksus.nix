@@ -23,7 +23,7 @@
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG3trl6beNSMRMKXl9Rs5mf3x6JyYIsT1Kie/IqmaRRX"
     ];
-    packages = [inputs.home-manager.packages.${pkgs.system}.default];
+    packages = [inputs.home-manager.packages.${pkgs.stdenv.hostPlatform.system}.default];
   };
   home-manager.users.rocksus =
     import ../../../home/rocksus/${config.networking.hostName}.nix;
