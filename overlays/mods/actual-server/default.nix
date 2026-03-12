@@ -1,12 +1,12 @@
 {prev}:
 prev.actual-server.overrideAttrs (oldAttrs: rec {
-  version = "v26.2.1";
+  version = "v25.12.0";
 
   src = prev.fetchFromGitHub {
     owner = "actualbudget";
     repo = "actual";
     rev = "${version}";
-    hash = "sha256-8cRt1WKa4Yp6rE2Jzko0rKJoCp7+KSzVdtKcv/aKK8o=";
+    hash = "sha256-hu5Y67vomAJI1IJ1gLAdapRACDW/Q+cOAB+Bo4uQ9+w=";
   };
 
   missingHashes = ./missing-hashes.json;
