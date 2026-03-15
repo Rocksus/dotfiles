@@ -6,6 +6,7 @@ let
     t480 = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG3trl6beNSMRMKXl9Rs5mf3x6JyYIsT1Kie/IqmaRRX";
     lv001 = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG3trl6beNSMRMKXl9Rs5mf3x6JyYIsT1Kie/IqmaRRX";
     m920q = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE27hUthv5P15KwUonnODc5OD1+LJVlNRnGXBRCQumnu";
+    homelab-hz = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINqFCDKi2cDb2t0lX0O5rdn8b+vNXPrKcZbdcomN02Tx";
 
     users = [
         rocksus
@@ -15,6 +16,7 @@ let
         t480
         lv001
         m920q
+        homelab-hz
     ];
 
 in {
