@@ -103,6 +103,14 @@
           agenix.nixosModules.default
         ];
       };
+      homelab-hz = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [
+          ./hosts/homelab-hz
+          inputs.disko.nixosModules.disko
+          agenix.nixosModules.default
+        ];
+      };
     };
     homeConfigurations = {
       "rocksus@t480" = home-manager.lib.homeManagerConfiguration {
@@ -119,6 +127,11 @@
         pkgs = nixpkgs.legacyPackages."x86_64-linux";
         extraSpecialArgs = {inherit inputs outputs;};
         modules = [./home/rocksus/lv001.nix];
+      };
+      "rocksus@homelab-hz" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [./home/rocksus/homelab-hz.nix];
       };
     };
   };
