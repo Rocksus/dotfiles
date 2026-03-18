@@ -9,10 +9,8 @@
       device = "nodev";
     };
   };
-  fileSystems."/boot/efi" = { device = "/dev/disk/by-uuid/3ED7-13F3"; fsType = "vfat"; };
   boot.initrd.availableKernelModules = [ "ata_piix" "uhci_hcd" "xen_blkfront" "vmw_pvscsi" ];
   boot.initrd.kernelModules = [ "nvme" ];
-  fileSystems."/" = { device = "/dev/sda1"; fsType = "ext4"; };
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 }
