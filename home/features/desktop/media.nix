@@ -17,7 +17,7 @@ in {
       # makemkv
       # mediainfo
       amf
-      blueberry
+      blueman
       ffmpeg_6-full
       gst_all_1.gstreamer
       gst_all_1.gst-vaapi
