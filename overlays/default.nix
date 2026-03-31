@@ -7,6 +7,7 @@
   # https://nixos.wiki/wiki/Overlays
   modifications = final: prev:
     {
+      python311 = prev.python312;
       n8n = import ./mods/n8n.nix {inherit prev;};
       actual-server = import ./mods/actual-server {inherit prev;};
     };
