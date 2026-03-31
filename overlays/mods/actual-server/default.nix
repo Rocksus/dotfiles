@@ -13,6 +13,6 @@ prev.actual-server.overrideAttrs (oldAttrs: rec {
   # https://nixos.org/manual/nixpkgs/stable/#javascript-yarn-v3-v4
   offlineCache = prev.yarn-berry.fetchYarnBerryDeps {
     inherit (oldAttrs) src missingHashes;
-    hash = "";
+    hash = "sha256-wdOIUYtiLbAkLngl+hIB/TlMLuX/YWZ9dt+a4qm+Fp8=";
   };
 })
