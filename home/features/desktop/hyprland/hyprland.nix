@@ -12,6 +12,11 @@ in {
     wayland.windowManager.hyprland = {
       enable = true;
       settings = {
+        cursor = {
+          no_hardware_cursors = true;
+          inactive_timeout = 0;
+        };
+
         xwayland = {
           force_zero_scaling = true;
         };
@@ -20,30 +25,25 @@ in {
           "waybar"
           "mako"
           "hypridle"
-          "wl-paste --type text --watch cliphist store" # Stores only text data
-          "wl-paste --type image --watch cliphist store" # Stores only image data "wl-paste -p -t text --watch clipman store -P --histpath=\"~/.local/share/clipman-primary.json\""
+          "wl-paste --type text --watch cliphist store"
+          "wl-paste --type image --watch cliphist store"
           "sleep 5; bash ${config.xdg.dataFile."change_wallpaper.sh".source} &"
         ];
 
         env = [
           "XCURSOR_SIZE,32"
-          "WLR_NO_HARDWARE_CURSORS,1"
           "GTK_THEME,Dracula"
         ];
 
         input = {
           kb_layout = "us";
-          kb_variant = "";
-          kb_model = "";
-          kb_rules = "";
           kb_options = "ctrl:nocaps";
           follow_mouse = 1;
+          sensitivity = 0;
 
           touchpad = {
             natural_scroll = true;
           };
-
-          sensitivity = 0;
         };
 
         general = {
@@ -57,13 +57,14 @@ in {
 
         decoration = {
           rounding = 8;
+          active_opacity = 0.9;
+          inactive_opacity = 0.5;
           blur = {
             enabled = true;
             size = 3;
             passes = 3;
+            new_optimizations = true;
           };
-          active_opacity = 0.9;
-          inactive_opacity = 0.5;
         };
 
         animations = {
@@ -84,35 +85,52 @@ in {
           preserve_split = true;
         };
 
-        master = {};
-
-        gesture = "3, horizontal, workspace";
+        gestures = {
+          gesture = [
+            "3, horizontal, workspace"
+            "3, swipe, mod: SUPER, resize"
+          ];
+        };
 
         windowrule = [
-          "float,class:file_progress"
-          "float,class:confirm"
-          "float,class:dialog"
-          "float,class:download"
-          "float,class:notification"
-          "float,class:error"
-          "float,class:splash"
-          "float,class:confirmreset"
-          "float,title:Open File"
-          "float,title:branchdialog"
-          "float,class:Lxappearance"
-          "float,class:Wofi"
-          "float,class:mako"
-          "float,class:viewnior"
-          "float,class:feh"
-          "float,class:pavucontrol-qt"
-          "float,class:pavucontrol"
-          "float,class:file-roller"
-          "fullscreen,class:wlogout"
-          "float,title:wlogout"
-          "fullscreen,title:wlogout"
-          "float,title:^(Media viewer)$"
-          "float,title:^(Volume Control)$"
-          "float,title:^(Picture-in-Picture)$"
+          # Float rules
+          "match:class ^(file_progress)$, float 1"
+          "match:class ^(confirm)$, float 1"
+          "match:class ^(dialog)$, float 1"
+          "match:class ^(download)$, float 1"
+          "match:class ^(notification)$, float 1"
+          "match:class ^(error)$, float 1"
+          "match:class ^(splash)$, float 1"
+          "match:class ^(confirmreset)$, float 1"
+          "match:title ^(Open File)$, float 1"
+          "match:title ^(branchdialog)$, float 1"
+          "match:class ^(Lxappearance)$, float 1"
+          "match:class ^(Wofi)$, float 1"
+          "match:class ^(mako)$, float 1"
+          "match:class ^(viewnior)$, float 1"
+          "match:class ^(feh)$, float 1"
+          "match:class ^(pavucontrol-qt)$, float 1"
+          "match:class ^(pavucontrol)$, float 1"
+          "match:class ^(file-roller)$, float 1"
+          
+          # Fullscreen and specific controls
+          "match:class ^(wlogout)$, fullscreen 1"
+          "match:title ^(wlogout)$, float 1"
+          "match:title ^(Media viewer)$, float 1"
+          "match:title ^(Volume Control)$, float 1"
+          "match:title ^(Picture-in-Picture)$, float 1"
+          
+          # Workspace assignments
+          "match:class ^(kitty)$, workspace 1"
+          "match:class ^(firefox)$, workspace 3"
+          "match:class ^(firefox)$, opacity 1.0"
+          
+          # Renamed idle_inhibit (formerly idleinhibit)
+          "match:class ^(firefox)$, match:fullscreen 1, idle_inhibit fullscreen"
+          
+          # Multi-attribute rules (Position and Size)
+          "match:title ^(Volume Control)$, size 800 600"
+          "match:title ^(Volume Control)$, move 75 44%"
         ];
 
         "$mainMod" = "SUPER";
@@ -173,14 +191,6 @@ in {
         bindm = [
           "$mainMod, mouse:272, movewindow"
           "$mainMod, mouse:273, resizewindow"
-        ];
-
-        windowrulev2 = [
-          "workspace=1,class:(kitty)"
-          "workspace=3,opacity=1.0,class:(firefox)"
-          "idleinhibit,fullscreen,class:(firefox)"
-          "size 800 600,title:(^(Volume Control)$)"
-          "move 75 44%,title:(^(Volume Control)$)"
         ];
       };
     };
