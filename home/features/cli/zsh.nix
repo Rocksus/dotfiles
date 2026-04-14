@@ -34,7 +34,7 @@ in {
             # Commands to run at login (e.g. when your user logs in)
             loginExtra = ''
                 if [[ "$(tty)" == "/dev/tty1" ]]; then
-                Hyprland &> /dev/null &
+                start-hyprland &> /dev/null &
                 exit
                 fi
             '';
