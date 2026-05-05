@@ -44,6 +44,7 @@
                 devenv.enable = true;
                 duckdb.enable = true;
                 flyctl.enable = true;
+                opencode.enable = true;
             };
         };
         design = {

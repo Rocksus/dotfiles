@@ -8,6 +8,7 @@
     ./devenv.nix
     ./duckdb.nix
     ./flyctl.nix
+    ./opencode.nix
   ];
 
   home.packages = with pkgs; [
