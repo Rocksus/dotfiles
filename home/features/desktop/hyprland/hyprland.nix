@@ -124,7 +124,7 @@ in {
           "match:class ^(kitty)$, workspace 1"
           "match:class ^(firefox)$, workspace 2"
           "match:class ^(firefox)$, opacity 1.0"
-          "match:class ^(zen-browser)$, workspace 3"
+          "match:class ^(zen-alpha)$, workspace 3"
           "match:class ^(slack)$, workspace 6"
           
           # Renamed idle_inhibit (formerly idleinhibit)
