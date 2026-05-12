@@ -122,8 +122,10 @@ in {
           
           # Workspace assignments
           "match:class ^(kitty)$, workspace 1"
-          "match:class ^(firefox)$, workspace 3"
+          "match:class ^(firefox)$, workspace 2"
           "match:class ^(firefox)$, opacity 1.0"
+          "match:class ^(zen-browser)$, workspace 3"
+          "match:class ^(slack)$, workspace 6"
           
           # Renamed idle_inhibit (formerly idleinhibit)
           "match:class ^(firefox)$, match:fullscreen 1, idle_inhibit fullscreen"
