@@ -10,6 +10,7 @@
       python311 = prev.python312;
       n8n = import ./mods/n8n.nix {inherit prev;};
       actual-server = import ./mods/actual-server {inherit prev;};
+      cherry-studio = import ./mods/cherry-studio.nix {inherit prev;};
     };
 
   stable-packages = final: _prev: {
