@@ -14,6 +14,6 @@ prev.n8n.overrideAttrs (oldAttrs: rec {
     fetcherVersion = 3;
     pname = oldAttrs.pname;
     inherit version src;
-    hash = "sha256-YGplNNvIOIY1BthWmejAzucXujq8AkgPJus774GmWCA=";
+    hash = "sha256-h1f95sVdgxSUeTKaby7IYG/YOPZ+Eqd/WCuC8Ge0GTs=";
   };
 })
