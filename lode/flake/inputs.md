@@ -17,7 +17,11 @@ Current state of inputs declared in `flake.nix`.
 | `rust-overlay` | Rust toolchain overlay | follows `nixpkgs` |
 | `swww` | Wallpaper daemon | `LGFae/swww` |
 | `affinity-nix` | Affinity Designer/Photo | `mrshmllow/affinity-nix` |
-| `authentik-nix` | Authentik identity provider | follows `nixpkgs`; only on `m920q` |
+| `authentik-nix` | Authentik identity provider | **does NOT follow `nixpkgs`** (uses its own pinned nixpkgs); only on `m920q`; currently tracking authentik `2026.5.3` |
+
+## Invariants
+
+- `authentik-nix` must NOT have `inputs.nixpkgs.follows = "nixpkgs"`. Its `buildGo125Module`-based `gopkgs` derivation pins a `vendorHash` that is a fixed-output derivation (FOD) hash validated against authentik-nix's **own** pinned nixpkgs. Following a different nixpkgs changes `goModules` FOD content (the Go module fetcher/vendoring logic in nixpkgs evolves) and breaks the build with a `vendorHash` mismatch on `authentik-gopkgs-<version>-go-modules`. Lesson learned 2026-07-04: bumping authentik-nix while keeping `follows` reproduced the same class of drift even on the latest input, because authentik-nix's tested nixpkgs (~June) was newer than the root nixpkgs (~Feb); only dropping `follows` made the FOD reproducible.
 
 ## Outputs
 
