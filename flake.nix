@@ -49,10 +49,7 @@
 
     authentik-nix = {
       url = "github:nix-community/authentik-nix";
-      # Do NOT follow root nixpkgs: authentik-nix's Go vendorHash (FOD) is
-      # validated against its own pinned nixpkgs. Following a different
-      # nixpkgs makes buildGo125Module's goModules FOD produce a different
-      # hash and breaks the build with a vendorHash mismatch.
+      inputs.nixpkgs.follows = "nixpkgs";
     };
  };
 
