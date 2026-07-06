@@ -26,7 +26,9 @@ Makefile             # link + disko-install targets
 - Per-host entry files (`hosts/<name>/default.nix`, `home/rocksus/<host>.nix`) compose common + feature modules.
 - New hosts require three additions: `hosts/<name>/`, `home/rocksus/<name>.nix`, and entries in `flake.nix` for both `nixosConfigurations` and `homeConfigurations`.
 - Secrets: define age file in `secrets/`, reference via agenix module in host `secrets.nix`. Never commit plaintext.
-- Disk provisioning: write `disko-config.nix`, then `make disko-install FLAKE_ATTR=<host> DISK_NAME=<disk> DISK_DEVICE=/dev/...`.
+- Disk provisioning (local bare-metal): write `disko-config.nix`, then `make disko-install FLAKE_ATTR=<host> DISK_NAME=<disk> DISK_DEVICE=/dev/...`.
+- Remote provisioning (VPS/cloud): use `make nixos-anywhere HOST=<host> TARGET_IP=<ip> SSH_PORT=<port> EXTRA_FILES_DIR=<dir>`. The `--extra-files` flag injects a pre-generated SSH host key so agenix secrets decrypt on first boot (see [homelab-hz.md](hosts/homelab-hz.md)).
+- Boot loader for UEFI VPS hosts: use `systemd-boot` with ESP mounted at `/boot`. Do not mix grub and systemd-boot in the same host config.
 - Rebuilds use `nh` (see `hosts/common/utils/nh.nix`).
 
 ## Commit style
